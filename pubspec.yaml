@@ -10,6 +10,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  url_strategy: ^0.2.0
+  responsive_builder: ^0.7.0
+  provider: ^6.0.2
+  go_router: ^10.0.0
+  url_launcher: ^6.0.20
+  flutter_html: ^3.0.0-beta.2
 
 dev_dependencies:
   flutter_test:
@@ -18,8 +26,24 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 
 flutter:
-
   uses-material-design: true
-
   assets:
-    - images/
+    - resources/images/
+  fonts:
+    - family: NotoSansJP
+      fonts:
+        - asset: resources/fonts/NotoSansJP-Regular.otf
+        - asset: resources/fonts/NotoSansJP-Bold.otf
+          weight: 700
+    - family: YesevaOne
+      fonts:
+        - asset: resources/fonts/YesevaOne-Regular.ttf
+    - family: ZenAntiqueSoft
+      fonts:
+        - asset: resources/fonts/ZenAntiqueSoft-Regular.ttf
+    - family: NotoColorEmoji
+      fonts:
+        - asset: resources/fonts/NotoColorEmoji-Regular.ttf
+    - family: GenEiLateMin_v2
+      fonts:
+        - asset: resources/fonts/GenEiLateMin_v2.ttc
