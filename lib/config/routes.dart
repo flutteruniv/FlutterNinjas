@@ -1,3 +1,4 @@
+import 'package:flutterninjas/presentation/tokusho_page.dart';
 import 'package:go_router/go_router.dart';
 
 import '../presentation/lp_page.dart';
@@ -15,6 +16,11 @@ class Routes {
       GoRoute(
         path: LPPage.route,
         builder: (context, state) => const LPPage(),
+      ),
+      // 特定商取引法に基づく表示
+      GoRoute(
+        path: TokushoPage.route,
+        builder: (context, state) => const TokushoPage(),
       ),
       // 利用規約
       GoRoute(
