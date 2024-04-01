@@ -65,7 +65,7 @@ class SpeakersWidget extends StatelessWidget {
                 ),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: isMobile ? 20 : 40),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColor.ninjaBlack,
@@ -73,7 +73,13 @@ class SpeakersWidget extends StatelessWidget {
             onPressed: () {
               launchUrlString('https://sessionize.com/flutterninjas-2024/');
             },
-            child: const Text('Submit your talk'),
+            child: const Padding(
+              padding: EdgeInsets.all(16),
+              child: Text(
+                'Submit your talk',
+                style: TextStyle(fontSize: 32),
+              ),
+            ),
           ),
         ],
       ),

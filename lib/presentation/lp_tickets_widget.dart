@@ -24,24 +24,20 @@ class TicketsWidget extends StatelessWidget {
                 ),
           ),
           SizedBox(height: isMobile ? 20 : 40),
-          Text(
-            'There are 3 types of tickets such as Early Bird, Regular, and Late Bird.\nThe content is same for all the tickets.\nThe earlier you buy, the more you save.',
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
-                ),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 16),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColor.ninjaBlack,
             ),
             onPressed: () {
-              // FIXME:
-              launchUrlString('https://forms.gle/XMQjj9D4QPc3yy66A');
+              launchUrlString('https://ti.to/flutterninjas/tokyo-2024');
             },
-            child: const Text('Buy Ticket Now'),
+            child: const Padding(
+              padding: EdgeInsets.all(16),
+              child: Text(
+                'Buy Now',
+                style: TextStyle(fontSize: 32),
+              ),
+            ),
           ),
         ],
       ),
