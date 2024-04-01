@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterninjas/presentation/tokusho_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -69,6 +70,21 @@ class FooterWidget extends StatelessWidget {
                                 ),
                       ),
                       onTap: () => context.go(PrivacyPolicyPage.route),
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    InkWell(
+                      child: Text(
+                        '特定商取引法に基づく表記',
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
+                      ),
+                      onTap: () => context.go(TokushoPage.route),
                     ),
                     const SizedBox(
                       height: 16,
@@ -149,6 +165,24 @@ class FooterWidget extends StatelessWidget {
                                 ),
                       ),
                       onTap: () => context.go(PrivacyPolicyPage.route),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 16),
+                      width: 1,
+                      height: 24,
+                      color: AppColor.primaryBlue,
+                    ),
+                    InkWell(
+                      child: Text(
+                        '特定商取引法に基づく表記',
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
+                      ),
+                      onTap: () => context.go(TokushoPage.route),
                     ),
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 16),
