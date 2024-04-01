@@ -23,6 +23,7 @@ June 13th (Thursday), 14th (Friday), 2024
 Everyone who love Flutter and understand English.
 
 ■Location
+Tokyo, Japan
 docomo R&D OPEN LAB ODAIBA 
 (Maximum Capacity is 200 people)
 

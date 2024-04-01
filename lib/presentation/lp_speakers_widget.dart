@@ -33,8 +33,8 @@ enum SpeakerType {
   final String desc;
 }
 
-class JudgesWidget extends StatelessWidget {
-  const JudgesWidget({super.key});
+class SpeakersWidget extends StatelessWidget {
+  const SpeakersWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
