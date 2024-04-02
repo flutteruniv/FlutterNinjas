@@ -12,6 +12,15 @@ class OutlineWidget extends StatelessWidget {
     final isMobile = context.watch<LPModel>().isMobile;
     return LPBaseContainer(
       isMobile: isMobile,
+      padding: isMobile
+          ? const EdgeInsets.symmetric(
+              vertical: 0,
+              horizontal: 32,
+            )
+          : const EdgeInsets.symmetric(
+              vertical: 0,
+              horizontal: 64,
+            ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -23,6 +32,7 @@ June 13th (Thursday), 14th (Friday), 2024
 Everyone who love Flutter and understand English.
 
 ■Location
+Tokyo, Japan
 docomo R&D OPEN LAB ODAIBA 
 (Maximum Capacity is 200 people)
 

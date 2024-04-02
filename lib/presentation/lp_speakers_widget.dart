@@ -33,8 +33,8 @@ enum SpeakerType {
   final String desc;
 }
 
-class JudgesWidget extends StatelessWidget {
-  const JudgesWidget({super.key});
+class SpeakersWidget extends StatelessWidget {
+  const SpeakersWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class JudgesWidget extends StatelessWidget {
                 ),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: isMobile ? 20 : 40),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColor.ninjaBlack,
@@ -73,7 +73,13 @@ class JudgesWidget extends StatelessWidget {
             onPressed: () {
               launchUrlString('https://sessionize.com/flutterninjas-2024/');
             },
-            child: const Text('Submit your talk'),
+            child: const Padding(
+              padding: EdgeInsets.all(16),
+              child: Text(
+                'Submit your talk',
+                style: TextStyle(fontSize: 32),
+              ),
+            ),
           ),
         ],
       ),

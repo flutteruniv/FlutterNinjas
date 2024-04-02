@@ -8,6 +8,7 @@ import 'lp_model.dart';
 import 'lp_outline_widget.dart';
 import 'lp_speakers_widget.dart';
 import 'lp_sponsors_widget.dart';
+import 'lp_tickets_widget.dart';
 import 'lp_top_widget.dart';
 
 class LPPage extends StatelessWidget {
@@ -55,7 +56,8 @@ class LPPage extends StatelessWidget {
                   children: [
                     TopWidget(),
                     OutlineWidget(),
-                    JudgesWidget(),
+                    TicketsWidget(),
+                    SpeakersWidget(),
                     SponsorsWidget(),
                     FooterWidget(),
                   ],
