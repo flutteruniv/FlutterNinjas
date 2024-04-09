@@ -25,7 +25,7 @@ class SponsorsWidget extends StatelessWidget {
           ),
           SizedBox(height: isMobile ? 20 : 40),
           Text(
-            'We are looking for sponsors to join us in elevating FlutterNinjas. If you are interested in becoming a sponsor, please follow the link below to a Google Form and contact us. We will send you the relevant documents in sequence from flutterninjas@flutteruniv.com.',
+            'We are looking for sponsors to join us in elevating FlutterNinjas. If you are interested in becoming a sponsor, please follow the link below to a Google Form and contact us. We will send you the relevant documents!',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
@@ -40,7 +40,13 @@ class SponsorsWidget extends StatelessWidget {
             onPressed: () {
               launchUrlString('https://forms.gle/XMQjj9D4QPc3yy66A');
             },
-            child: const Text('Contact Us'),
+            child: const Padding(
+              padding: EdgeInsets.all(16),
+              child: Text(
+                'Contact',
+                style: TextStyle(fontSize: 32),
+              ),
+            ),
           ),
         ],
       ),

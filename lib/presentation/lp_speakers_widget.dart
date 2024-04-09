@@ -14,7 +14,15 @@ enum SpeakerType {
     xAccountName: 'remi_rousselet',
     logoAssetName: 'resources/images/remi_profile.jpg',
     desc:
-        'We have a special guest from France this time! \n Remi Rousselet, the creator of the Flutter packages provider, flutter_hooks, riverpod, and freezed.',
+        'The creator of the Flutter packages provider, flutter_hooks, riverpod, and freezed.',
+  ),
+  majid(
+    name: 'Majid Hajian',
+    title: 'Special Guest',
+    xAccountName: 'mhadaily',
+    logoAssetName: 'resources/images/majid_profile.jpg',
+    desc:
+        'Flutter / Dart GDE, Organizer of Flutter Vikings, and the author of flutterengineering.io',
   ),
   ;
 
@@ -54,11 +62,11 @@ class SpeakersWidget extends StatelessWidget {
           ),
           SizedBox(height: isMobile ? 20 : 40),
           ...SpeakerType.values.map(
-            (judge) => SpeakerItemWidget(judgeType: judge),
+            (speaker) => SpeakerItemWidget(judgeType: speaker),
           ),
           SizedBox(height: isMobile ? 10 : 20),
           Text(
-            'Besides him, we call for papers. \nIt is open from March 18th to April 17th (Japan standard time).',
+            'Besides them, we call for papers. \nIt is open from March 18th to April 17th (Japan standard time).',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
@@ -76,7 +84,7 @@ class SpeakersWidget extends StatelessWidget {
             child: const Padding(
               padding: EdgeInsets.all(16),
               child: Text(
-                'Submit your talk',
+                'Submit talk',
                 style: TextStyle(fontSize: 32),
               ),
             ),
