@@ -75,7 +75,7 @@ class OrganizersWidget extends StatelessWidget {
           ),
           SizedBox(height: isMobile ? 20 : 40),
           GridView.count(
-            crossAxisCount: 4,
+            crossAxisCount: isMobile ? 2 : 4,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             children: OrganizerType.values
