@@ -25,14 +25,14 @@ class OutlineWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            '''■Date
+            '''💙Date
 June 13 (Thu) - 14 (Fri), 2024
 
-■Location
+💙Location
 Tokyo, Japan
 docomo R&D OPEN LAB ODAIBA (Up to 200 people)
 
-■About
+💙About
 FlutterNinjas is a brand-new Flutter conference for English speakers in Tokyo, Japan. \nThis is the first Flutter event for English speakers in Japan!!
             ''',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
