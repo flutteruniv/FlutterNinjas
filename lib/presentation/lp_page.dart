@@ -6,6 +6,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import '../config/app_color.dart';
 import 'lp_footer_widget.dart';
 import 'lp_model.dart';
+import 'lp_organizers_widget.dart';
 import 'lp_outline_widget.dart';
 import 'lp_speakers_widget.dart';
 import 'lp_sponsors_widget.dart';
@@ -59,8 +60,9 @@ class LPPage extends StatelessWidget {
                     OutlineWidget(),
                     TicketsWidget(),
                     SpeakersWidget(),
-                    ScheduleWidget(),
                     SponsorsWidget(),
+                    ScheduleWidget(),
+                    OrganizersWidget(),
                     FooterWidget(),
                   ],
                 ),
