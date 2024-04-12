@@ -7,7 +7,7 @@ import 'lp_base_container.dart';
 import 'lp_model.dart';
 
 class SponsorsWidget extends StatelessWidget {
-  const SponsorsWidget({Key? key}) : super(key: key);
+  const SponsorsWidget({super.key});
   @override
   Widget build(BuildContext context) {
     final isMobile = context.watch<LPModel>().isMobile;
@@ -25,7 +25,7 @@ class SponsorsWidget extends StatelessWidget {
           ),
           SizedBox(height: isMobile ? 20 : 40),
           Text(
-            'We are looking for sponsors to join us in elevating FlutterNinjas. If you are interested in becoming a sponsor, please follow the link below to a Google Form and contact us. We will send you the relevant documents!',
+            'We\'re looking for sponsors.\nIf you are interested in the sponsorship, please contact us. \nWe will send you the document!',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,

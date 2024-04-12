@@ -7,7 +7,7 @@ import 'lp_base_container.dart';
 import 'lp_model.dart';
 
 class TopWidget extends StatelessWidget {
-  const TopWidget({Key? key}) : super(key: key);
+  const TopWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -4,14 +4,14 @@ import '../config/app_color.dart';
 
 class LPBaseContainer extends StatelessWidget {
   const LPBaseContainer({
-    Key? key,
+    super.key,
     required this.child,
     required this.isMobile,
     this.color,
     this.backgroundImageName,
     this.padding,
     this.bodyMaxWidth,
-  }) : super(key: key);
+  });
 
   final Widget child;
   final bool isMobile;

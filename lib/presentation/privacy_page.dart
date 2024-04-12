@@ -5,7 +5,7 @@ import '../config/font.dart';
 
 //ローディング画面
 class PrivacyPolicyPage extends StatelessWidget {
-  const PrivacyPolicyPage({Key? key}) : super(key: key);
+  const PrivacyPolicyPage({super.key});
   static const String route = '/privacy_policy';
 
   static const text = '''

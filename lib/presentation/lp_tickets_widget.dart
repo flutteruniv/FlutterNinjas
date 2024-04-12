@@ -7,7 +7,7 @@ import 'lp_base_container.dart';
 import 'lp_model.dart';
 
 class TicketsWidget extends StatelessWidget {
-  const TicketsWidget({Key? key}) : super(key: key);
+  const TicketsWidget({super.key});
   @override
   Widget build(BuildContext context) {
     final isMobile = context.watch<LPModel>().isMobile;

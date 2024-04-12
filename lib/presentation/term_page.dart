@@ -5,7 +5,7 @@ import '../config/font.dart';
 
 //ローディング画面
 class TermPage extends StatelessWidget {
-  const TermPage({Key? key}) : super(key: key);
+  const TermPage({super.key});
   static const String route = '/term';
 
   static const text = '''
