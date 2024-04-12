@@ -38,7 +38,7 @@ class TokushoPage extends StatelessWidget {
 <p>EmailにてQRコード付きのチケットを送付</p>
 ''';
 
-  const TokushoPage({Key? key}) : super(key: key);
+  const TokushoPage({super.key});
 
   @override
   Widget build(BuildContext context) {

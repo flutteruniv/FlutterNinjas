@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterninjas/presentation/lp_schedule_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -12,7 +13,7 @@ import 'lp_tickets_widget.dart';
 import 'lp_top_widget.dart';
 
 class LPPage extends StatelessWidget {
-  const LPPage({Key? key}) : super(key: key);
+  const LPPage({super.key});
   static const String route = '/';
 
   @override
@@ -34,7 +35,7 @@ class LPPage extends StatelessWidget {
                       width: 36,
                       child: Image.asset('resources/images/fn3B.png'),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 8,
                     ),
                     Text(
@@ -58,6 +59,7 @@ class LPPage extends StatelessWidget {
                     OutlineWidget(),
                     TicketsWidget(),
                     SpeakersWidget(),
+                    ScheduleWidget(),
                     SponsorsWidget(),
                     FooterWidget(),
                   ],

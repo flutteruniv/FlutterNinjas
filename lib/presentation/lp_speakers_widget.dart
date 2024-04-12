@@ -66,14 +66,14 @@ class SpeakersWidget extends StatelessWidget {
           ),
           SizedBox(height: isMobile ? 10 : 20),
           Text(
-            'Besides them, we call for papers. \nIt is open from March 18th to April 17th (Japan standard time).',
+            'Besides them, we call for speakers. \nOpen until April 17th (JP time).',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
                 ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: isMobile ? 20 : 40),
+          const SizedBox(height: 16),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColor.ninjaBlack,

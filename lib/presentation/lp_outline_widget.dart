@@ -6,7 +6,7 @@ import 'lp_base_container.dart';
 import 'lp_model.dart';
 
 class OutlineWidget extends StatelessWidget {
-  const OutlineWidget({Key? key}) : super(key: key);
+  const OutlineWidget({super.key});
   @override
   Widget build(BuildContext context) {
     final isMobile = context.watch<LPModel>().isMobile;
@@ -25,20 +25,15 @@ class OutlineWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            '''■Date
-June 13th (Thursday), 14th (Friday), 2024
+            '''💙Date
+June 13 (Thu) - 14 (Fri), 2024
 
-■Who Should Attend?
-Everyone who love Flutter and understand English.
-
-■Location
+💙Location
 Tokyo, Japan
-docomo R&D OPEN LAB ODAIBA 
-(Maximum Capacity is 200 people)
+docomo R&D OPEN LAB ODAIBA (Up to 200 people)
 
-■About
+💙About
 FlutterNinjas is a brand-new Flutter conference for English speakers in Tokyo, Japan. \nThis is the first Flutter event for English speakers in Japan!!
-The early bird ticket will be available from April. Stay tuned!
             ''',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
@@ -53,10 +48,10 @@ The early bird ticket will be available from April. Stay tuned!
 
 class FeatureListTile extends StatelessWidget {
   const FeatureListTile({
-    Key? key,
+    super.key,
     required this.title,
     required this.description,
-  }) : super(key: key);
+  });
   final String title;
   final String description;
 

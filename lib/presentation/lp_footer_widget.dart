@@ -10,7 +10,7 @@ import 'privacy_page.dart';
 import 'term_page.dart';
 
 class FooterWidget extends StatelessWidget {
-  const FooterWidget({Key? key}) : super(key: key);
+  const FooterWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
