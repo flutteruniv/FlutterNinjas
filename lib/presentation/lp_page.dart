@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterninjas/presentation/lp_schedule_widget.dart';
+import 'package:flutterninjas/presentation/lp_venue_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -62,6 +63,7 @@ class LPPage extends StatelessWidget {
                     SpeakersWidget(),
                     SponsorsWidget(),
                     ScheduleWidget(),
+                    VenueWidget(),
                     OrganizersWidget(),
                     FooterWidget(),
                   ],
