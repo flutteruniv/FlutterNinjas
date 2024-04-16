@@ -37,6 +37,7 @@ class VenueWidget extends StatelessWidget {
                   'docomo R&D OPEN LAB ODAIBA',
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         color: Colors.white,
+                        fontSize: isMobile ? 16 : 28,
                       ),
                   textAlign: TextAlign.center,
                 ),
