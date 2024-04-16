@@ -23,24 +23,156 @@ class TicketsWidget extends StatelessWidget {
                   height: 1,
                 ),
           ),
-          SizedBox(height: isMobile ? 20 : 40),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: AppColor.ninjaBlack,
-            ),
-            onPressed: () {
-              launchUrlString('https://ti.to/flutterninjas/tokyo-2024');
-            },
-            child: const Padding(
-              padding: EdgeInsets.all(16),
-              child: Text(
-                'Buy Now',
-                style: TextStyle(fontSize: 32),
-              ),
-            ),
+          const SizedBox(height: 16),
+          Text(
+            'The earlier you buy, the more you save 💙',
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                  color: Colors.white,
+                ),
           ),
+          const SizedBox(height: 32),
+          isMobile
+              ? const Column(
+                  children: [
+                    EarlyBird(),
+                    SizedBox(height: 32),
+                    Regular(),
+                    SizedBox(height: 32),
+                    LateBird(),
+                  ],
+                )
+              : const Row(
+                  children: [
+                    Expanded(
+                      child: EarlyBird(),
+                    ),
+                    Expanded(
+                      child: Regular(),
+                    ),
+                    Expanded(
+                      child: LateBird(),
+                    ),
+                  ],
+                ),
         ],
       ),
+    );
+  }
+}
+
+class EarlyBird extends StatelessWidget {
+  const EarlyBird({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextButton(
+          onPressed: null,
+          child: Image.asset(
+            'resources/images/early-bird.png',
+            fit: BoxFit.contain,
+          ),
+        ),
+        const SizedBox(height: 4),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColor.ninjaBlack,
+          ),
+          onPressed: null,
+          child: const Padding(
+            padding: EdgeInsets.all(8),
+            child: Text(
+              'Buy Early-bird',
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class Regular extends StatelessWidget {
+  const Regular({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextButton(
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2024/with/regular');
+          },
+          child: Image.asset(
+            'resources/images/regular.png',
+            fit: BoxFit.contain,
+          ),
+        ),
+        const SizedBox(height: 4),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColor.ninjaBlack,
+          ),
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2024/with/regular');
+          },
+          child: const Padding(
+            padding: EdgeInsets.all(8),
+            child: Text(
+              'Buy Regular',
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class LateBird extends StatelessWidget {
+  const LateBird({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextButton(
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2024/with/late-bird');
+          },
+          child: Image.asset(
+            'resources/images/late-bird.png',
+            fit: BoxFit.contain,
+          ),
+        ),
+        const SizedBox(height: 4),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColor.ninjaBlack,
+          ),
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2024/with/late-bird');
+          },
+          child: const Padding(
+            padding: EdgeInsets.all(8),
+            child: Text(
+              'Buy Late-Bird',
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
