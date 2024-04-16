@@ -24,20 +24,99 @@ class TicketsWidget extends StatelessWidget {
                 ),
           ),
           SizedBox(height: isMobile ? 20 : 40),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: AppColor.ninjaBlack,
-            ),
-            onPressed: () {
-              launchUrlString('https://ti.to/flutterninjas/tokyo-2024');
-            },
-            child: const Padding(
-              padding: EdgeInsets.all(16),
-              child: Text(
-                'Buy Now',
-                style: TextStyle(fontSize: 32),
+          Row(
+            children: [
+              Expanded(
+                child: Column(
+                  children: [
+                    TextButton(
+                      onPressed: null,
+                      child: Image.asset(
+                        'resources/images/early-bird.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColor.ninjaBlack,
+                      ),
+                      onPressed: null,
+                      child: const Padding(
+                        padding: EdgeInsets.all(16),
+                        child: Text(
+                          'Buy Early-bird',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
+              Expanded(
+                child: Column(
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        launchUrlString(
+                            'https://ti.to/flutterninjas/tokyo-2024/with/regular');
+                      },
+                      child: Image.asset(
+                        'resources/images/regular.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColor.ninjaBlack,
+                      ),
+                      onPressed: () {
+                        launchUrlString(
+                            'https://ti.to/flutterninjas/tokyo-2024/with/regular');
+                      },
+                      child: const Padding(
+                        padding: EdgeInsets.all(16),
+                        child: Text(
+                          'Buy Regular',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        launchUrlString(
+                            'https://ti.to/flutterninjas/tokyo-2024/with/late-bird');
+                      },
+                      child: Image.asset(
+                        'resources/images/late-bird.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColor.ninjaBlack,
+                      ),
+                      onPressed: () {
+                        launchUrlString(
+                            'https://ti.to/flutterninjas/tokyo-2024/with/late-bird');
+                      },
+                      child: const Padding(
+                        padding: EdgeInsets.all(16),
+                        child: Text(
+                          'Buy Late-Bird',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),
