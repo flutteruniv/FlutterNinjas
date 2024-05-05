@@ -57,7 +57,7 @@ enum SpeakerType {
     title: 'Inside Flutter Text',
     xAccountName: 'b4tchkn',
     logoAssetName: 'resources/images/kakeru-nakabachi.png',
-    desc: 'CyberAgent, Inc.',
+    desc: 'Flutter Engineer at WinTicket, CyberAgent Inc.',
   ),
   kosuke(
     name: 'Kosuke Saigusa',
@@ -93,7 +93,8 @@ enum SpeakerType {
     title: 'Implementing a RAG (Retrieval-Augmented Generation) System in Dart',
     xAccountName: 'jaichangpark',
     logoAssetName: 'resources/images/park-jaichang.jpeg',
-    desc: 'Dreamus Company',
+    desc:
+        'Flutter & Android Developer | Flutter Seoul Organizer | GDG Golang Korea Organizer',
   ),
   parth(
     name: 'Parth Joshi',
@@ -180,7 +181,7 @@ class SpeakersWidget extends StatelessWidget {
           GridView.count(
             mainAxisSpacing: 8,
             crossAxisSpacing: 8,
-            childAspectRatio: isMobile ? 16 / 10 : 8 / 10,
+            childAspectRatio: isMobile ? 15 / 10 : 8 / 10,
             crossAxisCount: isMobile ? 1 : 3,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
