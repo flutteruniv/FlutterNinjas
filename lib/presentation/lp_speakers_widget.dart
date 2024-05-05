@@ -180,7 +180,7 @@ class SpeakersWidget extends StatelessWidget {
           GridView.count(
             mainAxisSpacing: 8,
             crossAxisSpacing: 8,
-            childAspectRatio: 8 / 10,
+            childAspectRatio: isMobile ? 16 / 10 : 8 / 10,
             crossAxisCount: isMobile ? 1 : 3,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
