@@ -49,25 +49,25 @@ class SponsorsWidget extends StatelessWidget {
                 ),
           ),
           SizedBox(height: isMobile ? 20 : 40),
-          SizedBox(height: isMobile ? 20 : 40),
-          Text(
-            'Gold Sponsors',
-            style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                  fontSize: isMobile ? 28 : 56,
-                  height: 1,
-                  color: Colors.white,
-                ),
-          ),
-          const SizedBox(height: 20),
-          GridView.count(
-            crossAxisCount: isMobile ? 1 : 2,
-            childAspectRatio: 1,
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            children: GoldSponsorType.values
-                .map((sponsor) => GoldSponsorItemWidget(type: sponsor))
-                .toList(),
-          ),
+          // SizedBox(height: isMobile ? 20 : 40),
+          // Text(
+          //   'Gold Sponsors',
+          //   style: Theme.of(context).textTheme.displayLarge?.copyWith(
+          //         fontSize: isMobile ? 28 : 56,
+          //         height: 1,
+          //         color: Colors.white,
+          //       ),
+          // ),
+          // const SizedBox(height: 20),
+          // GridView.count(
+          //   crossAxisCount: isMobile ? 1 : 2,
+          //   childAspectRatio: 1,
+          //   physics: const NeverScrollableScrollPhysics(),
+          //   shrinkWrap: true,
+          //   children: GoldSponsorType.values
+          //       .map((sponsor) => GoldSponsorItemWidget(type: sponsor))
+          //       .toList(),
+          // ),
           Text(
             'We\'re looking for more sponsors.\nIf you are interested in the sponsorship, please contact us.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
