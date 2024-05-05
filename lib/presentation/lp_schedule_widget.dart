@@ -21,6 +21,15 @@ class ScheduleWidget extends StatelessWidget {
                   height: 1,
                 ),
           ),
+          Text(
+            'We\'re creating a detailed schedule. Stay tuned.',
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.normal,
+                ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 16),
           Image.asset(
             'resources/images/schedule.png',
             fit: BoxFit.cover,

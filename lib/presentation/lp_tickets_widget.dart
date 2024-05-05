@@ -85,7 +85,7 @@ class EarlyBird extends StatelessWidget {
           child: const Padding(
             padding: EdgeInsets.all(8),
             child: Text(
-              'Buy Early-bird',
+              'Sold out',
               style: TextStyle(fontSize: 16),
             ),
           ),
