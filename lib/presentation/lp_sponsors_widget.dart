@@ -69,7 +69,7 @@ class SponsorsWidget extends StatelessWidget {
           //       .toList(),
           // ),
           Text(
-            'We\'re looking for more sponsors.\nIf you are interested in the sponsorship, please contact us.',
+            'Community sponsor is from \$330.\nEven a small sponsorship would be helpful.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
