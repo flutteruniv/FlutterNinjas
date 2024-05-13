@@ -55,11 +55,11 @@ class TicketsWidget extends StatelessWidget {
                   ],
                 ),
           const SizedBox(height: 32),
-          const Row(
+          Row(
             children: [
-              Expanded(child: SizedBox()),
-              Expanded(child: WithHotel()),
-              Expanded(child: SizedBox()),
+              if (!isMobile) const Expanded(child: SizedBox()),
+              const Expanded(child: WithHotel()),
+              if (!isMobile) const Expanded(child: SizedBox()),
             ],
           ),
         ],
