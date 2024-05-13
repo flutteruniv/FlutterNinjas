@@ -25,7 +25,7 @@ class TicketsWidget extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           Text(
-            'The earlier you buy, the more you save 💙',
+            'The ticket contains\n・2 days of attending right for FlutterNinjas\n・The right of asking the speakers some questions\n・Lunch for 2 days\n・Dinner for last night\n・flutterengineering.io from Majid Hajian\n・And some special gifts\n\nThe earlier you buy, the more you save.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
                 ),
@@ -54,6 +54,14 @@ class TicketsWidget extends StatelessWidget {
                     ),
                   ],
                 ),
+          const SizedBox(height: 32),
+          const Row(
+            children: [
+              Expanded(child: SizedBox()),
+              Expanded(child: WithHotel()),
+              Expanded(child: SizedBox()),
+            ],
+          ),
         ],
       ),
     );
@@ -85,7 +93,7 @@ class EarlyBird extends StatelessWidget {
           child: const Padding(
             padding: EdgeInsets.all(8),
             child: Text(
-              'Sold out',
+              'Sold Out',
               style: TextStyle(fontSize: 16),
             ),
           ),
@@ -168,6 +176,47 @@ class LateBird extends StatelessWidget {
             padding: EdgeInsets.all(8),
             child: Text(
               'Buy Late-Bird',
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class WithHotel extends StatelessWidget {
+  const WithHotel({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextButton(
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2024/with/with-hotel-jun-12th-15th-visa-support');
+          },
+          child: Image.asset(
+            'resources/images/with-hotel.png',
+            fit: BoxFit.contain,
+          ),
+        ),
+        const SizedBox(height: 4),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColor.ninjaBlack,
+          ),
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2024/with/with-hotel-jun-12th-15th-visa-support');
+          },
+          child: const Padding(
+            padding: EdgeInsets.all(8),
+            child: Text(
+              'Buy This',
               style: TextStyle(fontSize: 16),
             ),
           ),
