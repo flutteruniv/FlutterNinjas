@@ -14,7 +14,7 @@ enum GoldSponsorType {
   ),
   moneyForward(
     name: 'Money Forward',
-    url: 'https://moneyforward.com/',
+    url: 'https://corp.moneyforward.com',
     logoAssetName: 'resources/images/moneyforward.png',
   ),
   ;
@@ -176,7 +176,7 @@ class GoldSponsorItemWidget extends StatelessWidget {
         launchUrlString(type.url);
       },
       child: Padding(
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.all(24),
         child: Image.asset(
           type.logoAssetName,
           fit: BoxFit.contain,
@@ -202,7 +202,7 @@ class CommunitySponsorItemWidget extends StatelessWidget {
         launchUrlString(type.url);
       },
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(24),
         child: Image.asset(
           type.logoAssetName,
         ),
