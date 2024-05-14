@@ -20,7 +20,7 @@ enum SpeakerType {
     xAccountName: 'mhadaily',
     logoAssetName: 'resources/images/majid_profile.jpg',
     desc:
-        'Flutter / Dart GDE, Organizer of Flutter Vikings, and the author of flutterengineering.io',
+        'Flutter / Dart GDE, Organizer of Flutter Vikings, the author of flutterengineering.io',
   ),
   abdelrahman(
     name: 'Abdelrahman Eba',
@@ -93,8 +93,7 @@ enum SpeakerType {
     title: 'Implementing a RAG (Retrieval-Augmented Generation) System in Dart',
     xAccountName: 'jaichangpark',
     logoAssetName: 'resources/images/park-jaichang.jpeg',
-    desc:
-        'Flutter & Android Developer | Flutter Seoul Organizer | GDG Golang Korea Organizer',
+    desc: 'Flutter Seoul Organizer | GDG Golang Korea Organizer',
   ),
   parth(
     name: 'Parth Joshi',
@@ -109,8 +108,7 @@ enum SpeakerType {
         'Building a Gemini AI-Powered Emoji Movie-Guessing Feature in a Production-Ready App with Flutter',
     xAccountName: 'KelkarRenuka',
     logoAssetName: 'resources/images/renuka-kelkar.png',
-    desc:
-        'Field Marketing Specialist at Codemagic | Flutter GDE | Co-Founder ARNA Genext Solutions| Founder@TechPowerGirls',
+    desc: 'Field Marketing Specialist at Codemagic | Flutter GDE',
   ),
   sasha(
     name: 'Sasha Denisov',
