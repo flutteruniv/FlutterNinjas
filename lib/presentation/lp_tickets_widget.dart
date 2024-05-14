@@ -25,7 +25,7 @@ class TicketsWidget extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           Text(
-            'The ticket contains\n・The right of attending 2 days of FlutterNinjas\n・The right of asking the speakers\n・Coffee and some drinks\n・Lunch for 2 days\n・Dinner for 2nd day\n・The right of attending Pre-party & After-party\n・flutterengineering.io book from Majid Hajian\n・Some special gifts\n\nThe earlier you buy, the more you save.',
+            'The ticket contains\n・The right of attending 2 days of FlutterNinjas🧑‍💻\n・The right of asking the speakers🙋‍♀️\n・Coffee and some drinks☕️\n・Lunch for 2 days🍙\n・Dinner for 2nd day🥘\n・The right of attending Pre-party & After-party🥳\n・flutterengineering.io book from Majid Hajian📘\n・Some special gifts🎁\n\nThe earlier you buy, the more you save.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
                 ),

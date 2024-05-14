@@ -33,7 +33,7 @@ enum GoldSponsorType {
 enum CommunitySponsorType {
   magicPod(
     name: 'MagicPod',
-    url: 'https://codemagic.io/start/',
+    url: 'https://magicpod.com/',
     logoAssetName: 'resources/images/magicpod.png',
   ),
   ritsuan(
@@ -55,6 +55,11 @@ enum CommunitySponsorType {
     name: '弓道のアプリ 採点簿',
     url: 'https://kyudo-bowyer.com/',
     logoAssetName: 'resources/images/kyudo-bowyer.png',
+  ),
+  flutterDaigaku(
+    name: 'Flutter大学',
+    url: 'https://flutteruniv.com',
+    logoAssetName: 'resources/images/flutterdaigaku.jpg',
   ),
   ;
 
@@ -97,7 +102,7 @@ class SponsorsWidget extends StatelessWidget {
           ),
           GridView.count(
             crossAxisCount: isMobile ? 1 : 2,
-            childAspectRatio: 1,
+            childAspectRatio: 10 / 4,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             children: GoldSponsorType.values
@@ -114,7 +119,7 @@ class SponsorsWidget extends StatelessWidget {
                 ),
           ),
           GridView.count(
-            crossAxisCount: isMobile ? 2 : 5,
+            crossAxisCount: isMobile ? 2 : 6,
             childAspectRatio: 1,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
@@ -126,7 +131,7 @@ class SponsorsWidget extends StatelessWidget {
           ),
           const SizedBox(height: 80),
           Text(
-            'Sponsorship is from \$330.\nEven a small sponsorship would be so much helpful!',
+            'Sponsorship is from \$330.\nPersonal sponsor is also welcome!',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
@@ -171,7 +176,7 @@ class GoldSponsorItemWidget extends StatelessWidget {
         launchUrlString(type.url);
       },
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(8),
         child: Image.asset(
           type.logoAssetName,
           fit: BoxFit.contain,
@@ -197,7 +202,7 @@ class CommunitySponsorItemWidget extends StatelessWidget {
         launchUrlString(type.url);
       },
       child: Padding(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(16),
         child: Image.asset(
           type.logoAssetName,
         ),
