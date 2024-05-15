@@ -40,7 +40,7 @@ class LPPage extends StatelessWidget {
                     const SizedBox(
                       width: 8,
                     ),
-                    Text(
+                    SelectableText(
                       'FlutterNinjas',
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
                             fontWeight: FontWeight.bold,

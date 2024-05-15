@@ -15,7 +15,7 @@ class VenueWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          SelectableText(
             'Venue',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 42 : 156,
@@ -33,7 +33,7 @@ class VenueWidget extends StatelessWidget {
                 onPressed: () {
                   launchUrlString('https://docomo-openlab.jp/');
                 },
-                child: Text(
+                child: SelectableText(
                   'docomo R&D OPEN LAB ODAIBA',
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         color: Colors.white,

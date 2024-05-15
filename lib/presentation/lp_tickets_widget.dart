@@ -16,7 +16,7 @@ class TicketsWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          SelectableText(
             'Tickets',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 42 : 156,
@@ -24,7 +24,7 @@ class TicketsWidget extends StatelessWidget {
                 ),
           ),
           const SizedBox(height: 16),
-          Text(
+          SelectableText(
             'The ticket contains\n・The right of attending 2 days of FlutterNinjas🧑‍💻\n・The right of asking the speakers🙋‍♀️\n・Coffee and some drinks☕️\n・Lunch for 2 days🍙\n・Dinner for 2nd day🥘\n・The right of attending Pre-party & After-party🥳\n・flutterengineering.io book from Majid Hajian📘\n・Some special gifts🎁\n\nThe earlier you buy, the more you save.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
@@ -92,7 +92,7 @@ class EarlyBird extends StatelessWidget {
           onPressed: null,
           child: const Padding(
             padding: EdgeInsets.all(8),
-            child: Text(
+            child: SelectableText(
               'Sold Out',
               style: TextStyle(fontSize: 16),
             ),
@@ -133,7 +133,7 @@ class Regular extends StatelessWidget {
           },
           child: const Padding(
             padding: EdgeInsets.all(8),
-            child: Text(
+            child: SelectableText(
               'Buy Regular',
               style: TextStyle(fontSize: 16),
             ),
@@ -174,7 +174,7 @@ class LateBird extends StatelessWidget {
           },
           child: const Padding(
             padding: EdgeInsets.all(8),
-            child: Text(
+            child: SelectableText(
               'Buy Late-Bird',
               style: TextStyle(fontSize: 16),
             ),
@@ -215,7 +215,7 @@ class WithHotel extends StatelessWidget {
           },
           child: const Padding(
             padding: EdgeInsets.all(8),
-            child: Text(
+            child: SelectableText(
               'Buy This',
               style: TextStyle(fontSize: 16),
             ),

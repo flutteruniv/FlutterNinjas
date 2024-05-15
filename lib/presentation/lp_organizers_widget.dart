@@ -66,7 +66,7 @@ class OrganizersWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          SelectableText(
             'Team',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 42 : 156,
@@ -109,7 +109,7 @@ class OrganizerItemWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 8),
-        Text(
+        SelectableText(
           type.name,
           style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 color: Colors.white,

@@ -24,7 +24,7 @@ class OutlineWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          SelectableText(
             '''💙Date
 June 13 (Thu) - 14 (Fri), 2024
 
@@ -62,7 +62,7 @@ class FeatureListTile extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        SelectableText(
           title,
           style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 fontSize: isMobile ? 28 : 48,
@@ -73,7 +73,7 @@ class FeatureListTile extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-        Text(
+        SelectableText(
           description,
           style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 color: Colors.black,
