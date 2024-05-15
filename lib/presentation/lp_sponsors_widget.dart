@@ -84,7 +84,7 @@ class SponsorsWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          SelectableText(
             'Sponsors',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 42 : 156,
@@ -92,7 +92,7 @@ class SponsorsWidget extends StatelessWidget {
                 ),
           ),
           const SizedBox(height: 80),
-          Text(
+          SelectableText(
             'Gold',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 28 : 56,
@@ -110,7 +110,7 @@ class SponsorsWidget extends StatelessWidget {
                 .toList(),
           ),
           const SizedBox(height: 80),
-          Text(
+          SelectableText(
             'Community',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 28 : 56,
@@ -130,7 +130,7 @@ class SponsorsWidget extends StatelessWidget {
                 .toList(),
           ),
           const SizedBox(height: 80),
-          Text(
+          SelectableText(
             'Sponsorship is from \$330.\nPersonal sponsor is also welcome!',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,

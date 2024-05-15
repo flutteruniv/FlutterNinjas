@@ -30,7 +30,7 @@ class FooterWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          SelectableText(
             'Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.',
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   fontSize: 11,
@@ -46,7 +46,7 @@ class FooterWidget extends StatelessWidget {
                   children: [
                     InkWell(
                       child: Text(
-                        'Term',
+                        'Terms',
                         style:
                             Theme.of(context).textTheme.titleMedium?.copyWith(
                                   fontSize: 14,
@@ -120,7 +120,7 @@ class FooterWidget extends StatelessWidget {
                     const SizedBox(
                       height: 32,
                     ),
-                    Text(
+                    SelectableText(
                       '© 2024 FlutterNinjas',
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             fontSize: 14,
@@ -222,7 +222,7 @@ class FooterWidget extends StatelessWidget {
                           launchUrlString('https://twitter.com/FlutterNinjas'),
                     ),
                     const Spacer(),
-                    Text(
+                    SelectableText(
                       '© 2024 FlutterNinjas',
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             fontSize: 14,

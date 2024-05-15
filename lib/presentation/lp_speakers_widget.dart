@@ -168,7 +168,7 @@ class SpeakersWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          SelectableText(
             'Speakers',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 42 : 156,
@@ -217,7 +217,7 @@ class SpeakerItemWidget extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-        Text(
+        SelectableText(
           speakerType.name,
           style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 color: Colors.white,
@@ -238,7 +238,7 @@ class SpeakerItemWidget extends StatelessWidget {
           ),
         ),
         //SizedBox(height: isMobile ? 10 : 20),
-        Text(
+        SelectableText(
           speakerType.desc,
           style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                 color: Colors.white,

@@ -14,14 +14,14 @@ class ScheduleWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          SelectableText(
             'Schedule',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 42 : 156,
                   height: 1,
                 ),
           ),
-          Text(
+          SelectableText(
             'We\'re creating a detailed schedule. Stay tuned.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
