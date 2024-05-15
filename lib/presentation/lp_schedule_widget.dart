@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutterninjas/domain/speaker_type.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import 'lp_base_container.dart';
 import 'lp_model.dart';
@@ -21,19 +23,216 @@ class ScheduleWidget extends StatelessWidget {
                   height: 1,
                 ),
           ),
+          const SizedBox(height: 32),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: ListView(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  children: [
+                    DateWidget('Jun 12'),
+                    const SizedBox(height: 32),
+                    Divider(
+                      color: Colors.white24,
+                    ),
+                    BreakWidget('7:00 pm ~ 10:30 pm', 'Pre-Party @Giza'),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 32),
+              Expanded(
+                child: ListView(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  children: const [
+                    DateWidget('Jun 13'),
+                    SizedBox(height: 32),
+                    Divider(
+                      color: Colors.white24,
+                    ),
+                    BreakWidget('9:00 am', 'Door Open'),
+                    BreakWidget('9:45 am ~ 10:00 am', 'Opening remarks'),
+                    SessionWidget(SpeakerType.remi),
+                    SessionWidget(SpeakerType.parth),
+                    BreakWidget('', 'Lunch Break🍙'),
+                    SessionWidget(SpeakerType.manuela),
+                    SessionWidget(SpeakerType.akanksha),
+                    SessionWidget(SpeakerType.sasha),
+                    BreakWidget('', 'Coffee Break☕'),
+                    SessionWidget(SpeakerType.aoi),
+                    SessionWidget(SpeakerType.marcin),
+                    BreakWidget('', 'Coffee Break☕'),
+                    SessionWidget(SpeakerType.kakeru),
+                    SessionWidget(SpeakerType.tsuyoshi),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 32),
+              Expanded(
+                child: ListView(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  children: const [
+                    DateWidget('Jun 14'),
+                    SizedBox(height: 32),
+                    Divider(
+                      color: Colors.white24,
+                    ),
+                    BreakWidget('9:00 am', 'Door Open'),
+                    BreakWidget('9:45 am ~ 10:00 am', 'Opening remarks'),
+                    SessionWidget(SpeakerType.kosuke),
+                    SessionWidget(SpeakerType.takuma),
+                    BreakWidget('', 'Lunch Break🍙'),
+                    SessionWidget(SpeakerType.park),
+                    SessionWidget(SpeakerType.itome),
+                    SessionWidget(SpeakerType.ethiel),
+                    BreakWidget('', 'Coffee Break☕'),
+                    SessionWidget(SpeakerType.renuka),
+                    SessionWidget(SpeakerType.abdelrahman),
+                    BreakWidget('', 'Coffee Break☕️'),
+                    SessionWidget(SpeakerType.moritz),
+                    SessionWidget(SpeakerType.majid),
+                    BreakWidget('6:30 pm ~ 8:30 pm', '️Networking & Dinner🍣'),
+                    // BreakWidget(
+                    //     '9:30 pm ~ 11:30 pm', '️After Izakaya Party 🍺 @TBD'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class DateWidget extends StatelessWidget {
+  const DateWidget(
+    this.text, {
+    super.key,
+  });
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      textAlign: TextAlign.center,
+      style: Theme.of(context).textTheme.displayLarge!.copyWith(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+    );
+  }
+}
+
+class SessionWidget extends StatelessWidget {
+  const SessionWidget(this.speakerType, {super.key});
+
+  final SpeakerType speakerType;
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = context.watch<LPModel>().isMobile;
+
+    return SizedBox(
+      height: 180,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
           SelectableText(
-            'We\'re creating a detailed schedule. Stay tuned.',
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+            speakerType.time,
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
                 ),
-            textAlign: TextAlign.center,
           ),
           const SizedBox(height: 16),
-          Image.asset(
-            'resources/images/schedule.png',
-            fit: BoxFit.cover,
-          )
+          Row(
+            children: [
+              InkWell(
+                onTap: () {
+                  launchUrlString(
+                      'https://twitter.com/${speakerType.xAccountName}');
+                },
+                child: SizedBox(
+                  width: isMobile ? 12 : 24,
+                  child: ClipOval(
+                    child: Image.asset(speakerType.logoAssetName),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 6),
+              SelectableText(
+                speakerType.name,
+                style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 4),
+          SelectableText(
+            speakerType.title,
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 16,
+                ),
+          ),
+          const Spacer(),
+          const Divider(
+            color: Colors.white24,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class BreakWidget extends StatelessWidget {
+  const BreakWidget(this.time, this.title, {super.key});
+
+  final String time;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = context.watch<LPModel>().isMobile;
+
+    return SizedBox(
+      height: 90,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (time.isNotEmpty)
+            SelectableText(
+              time,
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.normal,
+                  ),
+            ),
+          if (time.isNotEmpty) const SizedBox(height: 16),
+          SelectableText(
+            title,
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 16,
+                ),
+          ),
+          const Spacer(),
+          const Divider(
+            color: Colors.white24,
+          ),
         ],
       ),
     );

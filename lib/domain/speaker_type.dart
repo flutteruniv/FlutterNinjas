@@ -6,6 +6,8 @@ enum SpeakerType {
     logoAssetName: 'resources/images/remi_profile.jpg',
     desc:
         'The creator of the Flutter packages provider, flutter_hooks, riverpod, and freezed.',
+    day: Day.day1,
+    time: '10:10 am ~ 10:50 am',
   ),
   majid(
     name: 'Majid Hajian',
@@ -14,6 +16,8 @@ enum SpeakerType {
     logoAssetName: 'resources/images/majid_profile.jpg',
     desc:
         'Flutter / Dart GDE, Organizer of Flutter Vikings, the author of flutterengineering.io',
+    day: Day.day2,
+    time: '5:40 pm ~ 6:20 pm',
   ),
   abdelrahman(
     name: 'Abdelrahman Eba',
@@ -22,6 +26,8 @@ enum SpeakerType {
     xAccountName: 'rahman_aymen',
     logoAssetName: 'resources/images/abdelrahman-eba.jpg',
     desc: 'CTO, Kwayes Information Technology',
+    day: Day.day2,
+    time: '4:05 pm ~ 4:45 pm',
   ),
   akanksha(
     name: 'Akanksha Singh',
@@ -29,6 +35,8 @@ enum SpeakerType {
     xAccountName: 'coder_jedi',
     logoAssetName: 'resources/images/akanksha-singh.jpg',
     desc: 'SWE at JP Morgan Chase & Co.',
+    day: Day.day1,
+    time: '01:35 pm ~ 01:55 pm',
   ),
   aoi(
     name: 'Aoi Umigishi',
@@ -36,6 +44,8 @@ enum SpeakerType {
     xAccountName: 'Aoi_Umigishi',
     logoAssetName: 'resources/images/aoi-umigishi.png',
     desc: 'Freelance Flutter engineer',
+    day: Day.day1,
+    time: '3:20 pm ~ 3:40 pm',
   ),
   ethiel(
     name: 'Ethiel Adiassa',
@@ -44,6 +54,8 @@ enum SpeakerType {
     logoAssetName: 'resources/images/ethiel-adiassa.png',
     desc:
         'Flutter/Dart GDE, Senior Software Engineer at Djamo, a YC backed startup',
+    day: Day.day2,
+    time: '2:10 pm ~ 2:50 pm',
   ),
   kakeru(
     name: 'Kakeru Nakabachi',
@@ -51,6 +63,8 @@ enum SpeakerType {
     xAccountName: 'b4tchkn',
     logoAssetName: 'resources/images/kakeru-nakabachi.png',
     desc: 'Flutter Engineer at WinTicket, CyberAgent Inc.',
+    day: Day.day1,
+    time: '4:45 pm ~ 5:05 pm',
   ),
   kosuke(
     name: 'Kosuke Saigusa',
@@ -58,6 +72,8 @@ enum SpeakerType {
     xAccountName: 'kosukesaigusa',
     logoAssetName: 'resources/images/kosuke-saigusa.jpg',
     desc: 'Flutter Engineer at Omiai, Inc.',
+    day: Day.day2,
+    time: '10:10 am ~ 10:40 am',
   ),
   manuela(
     name: 'Manuela Sakura Rommel',
@@ -66,6 +82,8 @@ enum SpeakerType {
     xAccountName: 'ManuSakuraRo',
     logoAssetName: 'resources/images/manuela-sakura-rommel.jpg',
     desc: 'Co-organizer Flutter Berlin',
+    day: Day.day1,
+    time: '1:00 pm ~ 1:20 pm',
   ),
   marcin(
     name: 'Marcin Chudy',
@@ -73,6 +91,8 @@ enum SpeakerType {
     xAccountName: 'mchudy_',
     logoAssetName: 'resources/images/marcin-chudy.jpeg',
     desc: 'Senior Flutter Developer at LeanCode',
+    day: Day.day1,
+    time: '3:55 pm ~ 4:25 pm',
   ),
   moritz(
     name: 'Moritz Theis',
@@ -80,6 +100,8 @@ enum SpeakerType {
     xAccountName: 'MoritzTheis',
     logoAssetName: 'resources/images/moritz-theis.png',
     desc: 'CEO at Snapp X',
+    day: Day.day2,
+    time: '5:05 pm ~ 4:25 pm',
   ),
   park(
     name: 'Park JaiChang',
@@ -87,6 +109,8 @@ enum SpeakerType {
     xAccountName: 'jaichangpark',
     logoAssetName: 'resources/images/park-jaichang.jpeg',
     desc: 'Flutter Seoul Organizer | GDG Golang Korea Organizer',
+    day: Day.day2,
+    time: '1:00 pm ~ 1:20 pm',
   ),
   parth(
     name: 'Parth Joshi',
@@ -94,6 +118,8 @@ enum SpeakerType {
     xAccountName: 'RotenKiwi',
     logoAssetName: 'resources/images/parth-joshi.jpg',
     desc: 'Mobile Dev Freelancer',
+    day: Day.day1,
+    time: '11:05 am ~ 11:35 am',
   ),
   renuka(
     name: 'Renuka Kelkar',
@@ -102,6 +128,8 @@ enum SpeakerType {
     xAccountName: 'KelkarRenuka',
     logoAssetName: 'resources/images/renuka-kelkar.png',
     desc: 'Field Marketing Specialist at Codemagic | Flutter GDE',
+    day: Day.day2,
+    time: '3:20 pm ~ 3:50 pm',
   ),
   sasha(
     name: 'Sasha Denisov',
@@ -109,6 +137,8 @@ enum SpeakerType {
     xAccountName: 'ShuregDenisov',
     logoAssetName: 'resources/images/sasha-denisov.jpg',
     desc: 'EPAM, Chief Software Engineer, Flutter and Dart GDE',
+    day: Day.day1,
+    time: '2:10 pm ~ 2:50 pm',
   ),
   takuma(
     name: 'Takuma Osada',
@@ -116,6 +146,8 @@ enum SpeakerType {
     xAccountName: 'ostk0069',
     logoAssetName: 'resources/images/takuma-osada.jpg',
     desc: 'Lead Mobile App Engineer at WinTicket, CyberAgent Inc.',
+    day: Day.day2,
+    time: '11:00 am ~ 11:30 am',
   ),
   tsuyoshi(
     name: 'Tsuyoshi Chujo',
@@ -124,6 +156,8 @@ enum SpeakerType {
     xAccountName: 'tsuyoshi_chujo',
     logoAssetName: 'resources/images/tsuyoshi-chujo.jpg',
     desc: 'Freelance mobile apps developer',
+    day: Day.day1,
+    time: '5:20 pm ~ 6:00 pm',
   ),
   itome(
     name: '糸目',
@@ -131,6 +165,8 @@ enum SpeakerType {
     xAccountName: 'itometeam',
     logoAssetName: 'resources/images/mi-mu-na.png',
     desc: 'Software engineer at woodstock inc.',
+    day: Day.day2,
+    time: '1:35 pm ~ 1:55 pm',
   ),
   ;
 
@@ -140,6 +176,8 @@ enum SpeakerType {
     required this.xAccountName,
     required this.logoAssetName,
     required this.desc,
+    required this.day,
+    required this.time,
   });
 
   final String name;
@@ -147,4 +185,11 @@ enum SpeakerType {
   final String xAccountName;
   final String logoAssetName;
   final String desc;
+  final Day day;
+  final String time;
+}
+
+enum Day {
+  day1,
+  day2;
 }
