@@ -24,88 +24,124 @@ class ScheduleWidget extends StatelessWidget {
                 ),
           ),
           const SizedBox(height: 32),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: ListView(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
+          isMobile
+              ? const Column(
                   children: [
-                    DateWidget('Jun 12'),
-                    const SizedBox(height: 32),
-                    Divider(
-                      color: Colors.white24,
+                    Day0ListView(),
+                    SizedBox(height: 64),
+                    Day1ListView(),
+                    SizedBox(height: 64),
+                    Day2ListView(),
+                  ],
+                )
+              : const Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Day0ListView(),
                     ),
-                    BreakWidget(
-                        '7:00 pm ~ 10:00 pm', 'Pre-Party @Higashi-Ginza'),
+                    SizedBox(width: 32),
+                    Expanded(
+                      child: Day1ListView(),
+                    ),
+                    SizedBox(width: 32),
+                    Expanded(
+                      child: Day2ListView(),
+                    ),
                   ],
                 ),
-              ),
-              const SizedBox(width: 32),
-              Expanded(
-                child: ListView(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  children: const [
-                    DateWidget('Jun 13'),
-                    SizedBox(height: 32),
-                    Divider(
-                      color: Colors.white24,
-                    ),
-                    BreakWidget('9:30 am', 'Door Open'),
-                    BreakWidget('10:00 am ~ 10:15 am', 'Opening talk'),
-                    SessionWidget(SpeakerType.remi),
-                    SessionWidget(SpeakerType.parth),
-                    BreakWidget('', 'Lunch Break🍙'),
-                    SessionWidget(SpeakerType.manuela),
-                    SessionWidget(SpeakerType.akanksha),
-                    SessionWidget(SpeakerType.sasha),
-                    BreakWidget('', 'Coffee Break☕'),
-                    SessionWidget(SpeakerType.aoi),
-                    SessionWidget(SpeakerType.marcin),
-                    BreakWidget('', 'Coffee Break☕'),
-                    SessionWidget(SpeakerType.kakeru),
-                    SessionWidget(SpeakerType.tsuyoshi),
-                  ],
-                ),
-              ),
-              const SizedBox(width: 32),
-              Expanded(
-                child: ListView(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  children: const [
-                    DateWidget('Jun 14'),
-                    SizedBox(height: 32),
-                    Divider(
-                      color: Colors.white24,
-                    ),
-                    BreakWidget('9:30 am', 'Door Open'),
-                    BreakWidget('10:00 am ~ 10:15 am', 'Opening remarks'),
-                    SessionWidget(SpeakerType.kosuke),
-                    SessionWidget(SpeakerType.takuma),
-                    BreakWidget('', 'Lunch Break🍙'),
-                    SessionWidget(SpeakerType.park),
-                    SessionWidget(SpeakerType.itome),
-                    SessionWidget(SpeakerType.ethiel),
-                    BreakWidget('', 'Coffee Break☕'),
-                    SessionWidget(SpeakerType.renuka),
-                    SessionWidget(SpeakerType.abdelrahman),
-                    BreakWidget('', 'Coffee Break☕️'),
-                    SessionWidget(SpeakerType.moritz),
-                    SessionWidget(SpeakerType.majid),
-                    BreakWidget('7:30 pm ~ 9:00 pm', '️Networking & Dinner🍣'),
-                    // BreakWidget(
-                    //     '9:30 pm ~ 11:30 pm', '️After Izakaya Party 🍺 @TBD'),
-                  ],
-                ),
-              ),
-            ],
-          ),
         ],
       ),
+    );
+  }
+}
+
+class Day0ListView extends StatelessWidget {
+  const Day0ListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      children: const [
+        DateWidget('Jun 12'),
+        SizedBox(height: 32),
+        Divider(
+          color: Colors.white24,
+        ),
+        BreakWidget('7:00 pm ~ 10:00 pm', 'Pre-Party @Higashi-Ginza'),
+      ],
+    );
+  }
+}
+
+class Day1ListView extends StatelessWidget {
+  const Day1ListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      children: const [
+        DateWidget('Jun 13'),
+        SizedBox(height: 32),
+        Divider(
+          color: Colors.white24,
+        ),
+        BreakWidget('9:30 am', 'Door Open'),
+        BreakWidget('10:00 am ~ 10:15 am', 'Opening talk'),
+        SessionWidget(SpeakerType.remi),
+        SessionWidget(SpeakerType.parth),
+        BreakWidget('', 'Lunch Break🍙'),
+        SessionWidget(SpeakerType.manuela),
+        SessionWidget(SpeakerType.akanksha),
+        SessionWidget(SpeakerType.sasha),
+        BreakWidget('', 'Coffee Break☕'),
+        SessionWidget(SpeakerType.aoi),
+        SessionWidget(SpeakerType.marcin),
+        BreakWidget('', 'Coffee Break☕'),
+        SessionWidget(SpeakerType.kakeru),
+        SessionWidget(SpeakerType.tsuyoshi),
+      ],
+    );
+  }
+}
+
+class Day2ListView extends StatelessWidget {
+  const Day2ListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      children: const [
+        DateWidget('Jun 14'),
+        SizedBox(height: 32),
+        Divider(
+          color: Colors.white24,
+        ),
+        BreakWidget('9:30 am', 'Door Open'),
+        BreakWidget('10:00 am ~ 10:15 am', 'Opening remarks'),
+        SessionWidget(SpeakerType.kosuke),
+        SessionWidget(SpeakerType.takuma),
+        BreakWidget('', 'Lunch Break🍙'),
+        SessionWidget(SpeakerType.park),
+        SessionWidget(SpeakerType.itome),
+        SessionWidget(SpeakerType.ethiel),
+        BreakWidget('', 'Coffee Break☕'),
+        SessionWidget(SpeakerType.renuka),
+        SessionWidget(SpeakerType.abdelrahman),
+        BreakWidget('', 'Coffee Break☕️'),
+        SessionWidget(SpeakerType.moritz),
+        SessionWidget(SpeakerType.majid),
+        BreakWidget('7:30 pm ~ 9:00 pm', '️Networking & Dinner🍣'),
+        // BreakWidget(
+        //     '9:30 pm ~ 11:30 pm', '️After Izakaya Party 🍺 @TBD'),
+      ],
     );
   }
 }
