@@ -67,7 +67,7 @@ class Day0ListView extends StatelessWidget {
       shrinkWrap: true,
       children: const [
         DateWidget('Jun 12'),
-        const SizedBox(height: 32),
+        SizedBox(height: 32),
         Divider(
           color: Colors.white24,
         ),
