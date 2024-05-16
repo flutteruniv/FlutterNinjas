@@ -38,7 +38,8 @@ class ScheduleWidget extends StatelessWidget {
                     Divider(
                       color: Colors.white24,
                     ),
-                    BreakWidget('7:00 pm ~ 10:30 pm', 'Pre-Party @Giza'),
+                    BreakWidget(
+                        '7:00 pm ~ 10:00 pm', 'Pre-Party @Higashi-Ginza'),
                   ],
                 ),
               ),
@@ -53,8 +54,8 @@ class ScheduleWidget extends StatelessWidget {
                     Divider(
                       color: Colors.white24,
                     ),
-                    BreakWidget('9:00 am', 'Door Open'),
-                    BreakWidget('9:45 am ~ 10:00 am', 'Opening remarks'),
+                    BreakWidget('9:30 am', 'Door Open'),
+                    BreakWidget('10:00 am ~ 10:15 am', 'Opening talk'),
                     SessionWidget(SpeakerType.remi),
                     SessionWidget(SpeakerType.parth),
                     BreakWidget('', 'Lunch Break🍙'),
@@ -81,8 +82,8 @@ class ScheduleWidget extends StatelessWidget {
                     Divider(
                       color: Colors.white24,
                     ),
-                    BreakWidget('9:00 am', 'Door Open'),
-                    BreakWidget('9:45 am ~ 10:00 am', 'Opening remarks'),
+                    BreakWidget('9:30 am', 'Door Open'),
+                    BreakWidget('10:00 am ~ 10:15 am', 'Opening remarks'),
                     SessionWidget(SpeakerType.kosuke),
                     SessionWidget(SpeakerType.takuma),
                     BreakWidget('', 'Lunch Break🍙'),
@@ -95,7 +96,7 @@ class ScheduleWidget extends StatelessWidget {
                     BreakWidget('', 'Coffee Break☕️'),
                     SessionWidget(SpeakerType.moritz),
                     SessionWidget(SpeakerType.majid),
-                    BreakWidget('6:30 pm ~ 8:30 pm', '️Networking & Dinner🍣'),
+                    BreakWidget('7:30 pm ~ 9:00 pm', '️Networking & Dinner🍣'),
                     // BreakWidget(
                     //     '9:30 pm ~ 11:30 pm', '️After Izakaya Party 🍺 @TBD'),
                   ],
