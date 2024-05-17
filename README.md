@@ -7,6 +7,6 @@ https://flutterninjas.dev
 ## How to deploy
 
 ```bash
-flutter build web --wasm
+flutter build web
 firebase deploy
 ```
