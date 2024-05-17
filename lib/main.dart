@@ -17,7 +17,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'FlutterNinjas',
+      title: 'FlutterNinjas Tokyo 2024',
       theme: AppTheme.data,
       routeInformationProvider: Routes.instance.router.routeInformationProvider,
       routerDelegate: Routes.instance.router.routerDelegate,

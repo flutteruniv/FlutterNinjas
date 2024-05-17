@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "FlutterNinjas is a brand new Flutter Conference held in Tokyo Japan",
+    "description": "FlutterNinjas is a brand new Flutter Conference in Tokyo Japan",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

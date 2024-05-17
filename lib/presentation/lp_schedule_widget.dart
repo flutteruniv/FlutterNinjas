@@ -176,7 +176,7 @@ class SessionWidget extends StatelessWidget {
     final isMobile = context.watch<LPModel>().isMobile;
 
     return SizedBox(
-      height: 180,
+      height: 190,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -244,7 +244,7 @@ class BreakWidget extends StatelessWidget {
     final isMobile = context.watch<LPModel>().isMobile;
 
     return SizedBox(
-      height: 90,
+      height: 95,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
