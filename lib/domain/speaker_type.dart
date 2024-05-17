@@ -160,7 +160,7 @@ enum SpeakerType {
     time: '6:00 pm ~ 6:30 pm',
   ),
   itome(
-    name: '糸目',
+    name: 'Takeshi Tsukamoto',
     title: 'Introducing flx: A New TUI DevTool for Flutter on the Terminal',
     xAccountName: 'itometeam',
     logoAssetName: 'resources/images/mi-mu-na.png',
