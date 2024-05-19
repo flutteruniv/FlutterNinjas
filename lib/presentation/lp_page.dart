@@ -3,6 +3,7 @@ import 'package:flutterninjas/presentation/lp_schedule_widget.dart';
 import 'package:flutterninjas/presentation/lp_venue_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../config/app_color.dart';
 import 'lp_footer_widget.dart';
@@ -48,6 +49,19 @@ class LPPage extends StatelessWidget {
                             color: Colors.white,
                             fontSize: 16,
                           ),
+                    ),
+                    const Spacer(),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColor.ninjaBlack,
+                      ),
+                      onPressed: () {
+                        launchUrlString(
+                            'https://ti.to/flutterninjas/tokyo-2024');
+                      },
+                      child: Text(
+                        'Buy Ticket',
+                      ),
                     ),
                   ],
                 ),
