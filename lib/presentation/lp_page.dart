@@ -9,6 +9,7 @@ import 'lp_footer_widget.dart';
 import 'lp_model.dart';
 import 'lp_organizers_widget.dart';
 import 'lp_outline_widget.dart';
+import 'lp_qa_widget.dart';
 import 'lp_speakers_widget.dart';
 import 'lp_sponsors_widget.dart';
 import 'lp_tickets_widget.dart';
@@ -64,6 +65,7 @@ class LPPage extends StatelessWidget {
                     SpeakersWidget(),
                     SponsorsWidget(),
                     VenueWidget(),
+                    QAWidget(),
                     OrganizersWidget(),
                     FooterWidget(),
                   ],
