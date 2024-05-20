@@ -59,7 +59,7 @@ class LPPage extends StatelessWidget {
                         launchUrlString(
                             'https://ti.to/flutterninjas/tokyo-2024');
                       },
-                      child: Text(
+                      child: const Text(
                         'Buy Ticket',
                       ),
                     ),
