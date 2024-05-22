@@ -26,16 +26,34 @@ class SponsorsWidget extends StatelessWidget {
           ),
           const SizedBox(height: 80),
           SelectableText(
+            'Platinum',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                  fontSize: isMobile ? 28 : 56,
+                  height: 1,
+                  color: AppColor.platinum,
+                ),
+          ),
+          GridView.count(
+            crossAxisCount: isMobile ? 1 : 1,
+            childAspectRatio: 10 / 2,
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            children: PlatinumSponsorType.values
+                .map((sponsor) => PlatinumSponsorItemWidget(type: sponsor))
+                .toList(),
+          ),
+          SizedBox(height: isMobile ? 80 : 90),
+          SelectableText(
             'Gold',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 28 : 56,
                   height: 1,
-                  color: Colors.white,
+                  color: AppColor.primaryYellowColor,
                 ),
           ),
           GridView.count(
-            crossAxisCount: isMobile ? 1 : 2,
-            childAspectRatio: 10 / 4,
+            crossAxisCount: isMobile ? 1 : 1,
+            childAspectRatio: 10 / 2,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             children: GoldSponsorType.values
@@ -93,6 +111,32 @@ class SponsorsWidget extends StatelessWidget {
   }
 }
 
+class PlatinumSponsorItemWidget extends StatelessWidget {
+  const PlatinumSponsorItemWidget({
+    super.key,
+    required this.type,
+  });
+  final PlatinumSponsorType type;
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = context.watch<LPModel>().isMobile;
+
+    return InkWell(
+      onTap: () {
+        launchUrlString(type.url);
+      },
+      child: Padding(
+        padding: EdgeInsets.all(isMobile ? 16 : 40),
+        child: Image.asset(
+          type.logoAssetName,
+          fit: BoxFit.contain,
+        ),
+      ),
+    );
+  }
+}
+
 class GoldSponsorItemWidget extends StatelessWidget {
   const GoldSponsorItemWidget({
     super.key,
@@ -109,7 +153,7 @@ class GoldSponsorItemWidget extends StatelessWidget {
         launchUrlString(type.url);
       },
       child: Padding(
-        padding: const EdgeInsets.all(24),
+        padding: EdgeInsets.all(isMobile ? 4 : 20),
         child: Image.asset(
           type.logoAssetName,
           fit: BoxFit.contain,

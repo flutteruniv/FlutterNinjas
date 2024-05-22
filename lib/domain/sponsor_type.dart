@@ -1,9 +1,23 @@
-enum GoldSponsorType {
+enum PlatinumSponsorType {
   codeMagic(
     name: 'Codemagic',
     url: 'https://codemagic.io/start/',
     logoAssetName: 'resources/images/codemagic.png',
   ),
+  ;
+
+  const PlatinumSponsorType({
+    required this.name,
+    required this.url,
+    required this.logoAssetName,
+  });
+
+  final String name;
+  final String url;
+  final String logoAssetName;
+}
+
+enum GoldSponsorType {
   moneyForward(
     name: 'Money Forward',
     url: 'https://corp.moneyforward.com',
