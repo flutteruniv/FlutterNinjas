@@ -37,6 +37,16 @@ enum GoldSponsorType {
 }
 
 enum CommunitySponsorType {
+  blendthink(
+    name: 'blendthink',
+    url: 'https://twitter.com/blendthink',
+    logoAssetName: 'resources/images/blendthink.png',
+  ),
+  studyPlus(
+    name: 'スタディプラス株式会社',
+    url: 'https://info.studyplus.co.jp/recruit',
+    logoAssetName: 'resources/images/studyplus.png',
+  ),
   magicPod(
     name: 'MagicPod',
     url: 'https://magicpod.com/',
@@ -52,20 +62,25 @@ enum CommunitySponsorType {
     url: 'https://0plus.jp/',
     logoAssetName: 'resources/images/zeroplus.png',
   ),
-  blendthink(
-    name: 'blendthink',
-    url: 'https://twitter.com/blendthink',
-    logoAssetName: 'resources/images/blendthink.png',
+  flutterDaigaku(
+    name: 'Flutter大学',
+    url: 'https://flutteruniv.com',
+    logoAssetName: 'resources/images/flutterdaigaku.jpg',
   ),
   kyudo(
     name: '弓道のアプリ 採点簿',
     url: 'https://kyudo-bowyer.com/',
     logoAssetName: 'resources/images/kyudo-bowyer.png',
   ),
-  flutterDaigaku(
-    name: 'Flutter大学',
-    url: 'https://flutteruniv.com',
-    logoAssetName: 'resources/images/flutterdaigaku.jpg',
+  proto(
+    name: '株式会社プロトソリューション',
+    url: 'https://www.protosolution.co.jp',
+    logoAssetName: 'resources/images/proto.png',
+  ),
+  DCM(
+    name: 'DCM',
+    url: 'https://dcm.dev',
+    logoAssetName: 'resources/images/dcm.png',
   ),
   ;
 
