@@ -44,7 +44,7 @@ enum CommunitySponsorType {
   ),
   studyPlus(
     name: 'スタディプラス株式会社',
-    url: 'https://tech.studyplus.co.jp/recruit',
+    url: 'https://info.studyplus.co.jp/recruit',
     logoAssetName: 'resources/images/studyplus.png',
   ),
   magicPod(
@@ -74,7 +74,7 @@ enum CommunitySponsorType {
   ),
   proto(
     name: '株式会社プロトソリューション',
-    url: 'https://flutteruniv.com',
+    url: 'https://www.protosolution.co.jp',
     logoAssetName: 'resources/images/proto.png',
   ),
   DCM(
