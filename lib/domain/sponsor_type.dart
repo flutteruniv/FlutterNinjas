@@ -62,20 +62,20 @@ enum CommunitySponsorType {
     url: 'https://0plus.jp/',
     logoAssetName: 'resources/images/zeroplus.png',
   ),
-  kyudo(
-    name: '弓道のアプリ 採点簿',
-    url: 'https://kyudo-bowyer.com/',
-    logoAssetName: 'resources/images/kyudo-bowyer.png',
-  ),
   flutterDaigaku(
     name: 'Flutter大学',
     url: 'https://flutteruniv.com',
     logoAssetName: 'resources/images/flutterdaigaku.jpg',
   ),
+  kyudo(
+    name: '弓道のアプリ 採点簿',
+    url: 'https://kyudo-bowyer.com/',
+    logoAssetName: 'resources/images/kyudo-bowyer.png',
+  ),
   proto(
     name: '株式会社プロトソリューション',
     url: 'https://flutteruniv.com',
-    logoAssetName: 'resources/images/proto.jpeg',
+    logoAssetName: 'resources/images/proto.png',
   ),
   DCM(
     name: 'DCM',
