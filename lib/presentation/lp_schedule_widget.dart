@@ -101,9 +101,9 @@ class Day1ListView extends StatelessWidget {
         SessionWidget(SpeakerType.akanksha),
         SessionWidget(SpeakerType.sasha),
         BreakWidget('', 'Coffee Break☕'),
-        SessionWidget(SpeakerType.kevin), // FIXME
         SessionWidget(SpeakerType.aoi),
         SessionWidget(SpeakerType.marcin),
+        SessionWidget(SpeakerType.kevin),
         BreakWidget('', 'Coffee Break☕'),
         SessionWidget(SpeakerType.kakeru),
         SessionWidget(SpeakerType.tsuyoshi),

@@ -96,7 +96,7 @@ I'm a Flutter/Dart GDE, Senior Software at a Fintech company backed by YC. We pr
     logoAssetName: 'resources/images/kakeru-nakabachi.png',
     desc: 'Flutter Engineer at WinTicket, CyberAgent Inc.',
     day: Day.day1,
-    time: '5:25 pm ~ 5:45 pm',
+    time: '6:10 pm ~ 6:30 pm',
     talkDescription:
         '''In app development using Flutter, Text is heavily used in every app, but the behavior is slightly different between iOS and Android, and it doesn't look exactly the same on both platforms as is. Android tends to take up more widget height than iOS, among other differences. While using the same font on iOS and Android can eliminate design differences when placing Text across platforms, it's not user-friendly if the system font chosen by the OS the user usually sees is different. In this session, we will introduce the components of Text, make the audience aware that the execution results of Text are slightly different for each platform, and aim to be able to create Text that looks the same on iOS and Android.''',
   ),
@@ -261,7 +261,7 @@ In this session, we will discuss the following.
     logoAssetName: 'resources/images/tsuyoshi-chujo.jpg',
     desc: 'Freelance mobile apps developer',
     day: Day.day1,
-    time: '6:00 pm ~ 6:30 pm',
+    time: '6:45 pm ~ 7:15 pm',
     talkDescription:
         '''One of the most important concepts of Flutter is the “Widget tree.” Widgets’ styles are provided through the widget tree, the widget tree manages states, and rebuilds are optimized based on the mechanism of the widget tree. Understanding how widget tree works is crucial to enhancing the quality of our apps.
 
@@ -302,7 +302,7 @@ Additionally, attendees will gain insights into the development process behind f
     logoAssetName: 'resources/images/kevin.png',
     desc: 'Senior Solutions Engineer, Codemagic(Plutinum Sponsor)',
     day: Day.day1,
-    time: 'TBD', // FIXME
+    time: '5:10 pm ~ 5:40 pm',
     talkDescription:
         'Kevin Suhajda is a Senior Solutions Engineer at Codemagic with over a decade of experience working in the mobile applications space. Using his background in mobile application development he has helped hundreds of mobile development teams set up efficient CI/CD pipelines to build, test, and publish their apps to app stores.',
   ),
