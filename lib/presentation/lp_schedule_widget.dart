@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterninjas/config/app_color.dart';
 import 'package:flutterninjas/domain/speaker_type.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -100,6 +101,7 @@ class Day1ListView extends StatelessWidget {
         SessionWidget(SpeakerType.akanksha),
         SessionWidget(SpeakerType.sasha),
         BreakWidget('', 'Coffee Break☕'),
+        SessionWidget(SpeakerType.kevin), // FIXME
         SessionWidget(SpeakerType.aoi),
         SessionWidget(SpeakerType.marcin),
         BreakWidget('', 'Coffee Break☕'),
@@ -175,60 +177,139 @@ class SessionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final isMobile = context.watch<LPModel>().isMobile;
 
-    return SizedBox(
-      height: 190,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SelectableText(
-            speakerType.time,
-            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
-                ),
-          ),
-          const SizedBox(height: 16),
-          Row(
-            children: [
-              InkWell(
-                onTap: () {
-                  launchUrlString(
-                      'https://twitter.com/${speakerType.xAccountName}');
-                },
-                child: SizedBox(
-                  width: isMobile ? 12 : 24,
-                  child: ClipOval(
-                    child: Image.asset(speakerType.logoAssetName),
+    return InkWell(
+      onTap: () {
+        _dialogBuilder(context, speakerType, isMobile);
+      },
+      child: SizedBox(
+        height: 190,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SelectableText(
+              speakerType.time,
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.normal,
+                  ),
+            ),
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                InkWell(
+                  onTap: () {
+                    launchUrlString(
+                        'https://twitter.com/${speakerType.xAccountName}');
+                  },
+                  child: SizedBox(
+                    width: isMobile ? 12 : 24,
+                    child: ClipOval(
+                      child: Image.asset(speakerType.logoAssetName),
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(width: 6),
-              SelectableText(
-                speakerType.name,
-                style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 4),
-          SelectableText(
-            speakerType.title,
-            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
-                  fontSize: 16,
+                const SizedBox(width: 6),
+                SelectableText(
+                  speakerType.name,
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
                 ),
-          ),
-          const Spacer(),
-          const Divider(
-            color: Colors.white24,
-          ),
-        ],
+              ],
+            ),
+            const SizedBox(height: 4),
+            SelectableText(
+              speakerType.title,
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 16,
+                  ),
+            ),
+            const Spacer(),
+            const Divider(
+              color: Colors.white24,
+            ),
+          ],
+        ),
       ),
+    );
+  }
+
+  Future<void> _dialogBuilder(
+      BuildContext context, SpeakerType speakerType, bool isMobile) {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          insetPadding: EdgeInsets.all(isMobile ? 32 : 80),
+          backgroundColor: AppColor.backgroundNavy,
+          title: Text(
+            speakerType.title,
+            style: const TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          content: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SelectableText(
+                  speakerType.time,
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal,
+                      ),
+                ),
+                const SizedBox(height: 8),
+                Row(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        launchUrlString(
+                            'https://twitter.com/${speakerType.xAccountName}');
+                      },
+                      child: SizedBox(
+                        width: 24,
+                        child: ClipOval(
+                          child: Image.asset(speakerType.logoAssetName),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    SelectableText(
+                      speakerType.name,
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                SelectableText(
+                  speakerType.talkDescription,
+                  style: const TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Close'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 }
