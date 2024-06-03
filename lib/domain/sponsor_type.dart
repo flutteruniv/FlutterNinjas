@@ -82,6 +82,11 @@ enum CommunitySponsorType {
     url: 'https://dcm.dev',
     logoAssetName: 'resources/images/dcm.png',
   ),
+  livMap(
+    name: 'LivMap',
+    url: 'https://livmap.co',
+    logoAssetName: 'resources/images/livmap.png',
+  ),
   ;
 
   const CommunitySponsorType({
