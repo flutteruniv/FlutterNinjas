@@ -77,7 +77,7 @@ enum CommunitySponsorType {
     url: 'https://www.protosolution.co.jp',
     logoAssetName: 'resources/images/proto.png',
   ),
-  DCM(
+  dcm(
     name: 'DCM',
     url: 'https://dcm.dev',
     logoAssetName: 'resources/images/dcm.png',
