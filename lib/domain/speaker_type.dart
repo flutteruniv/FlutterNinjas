@@ -11,17 +11,6 @@ enum SpeakerType {
     talkDescription:
         'Let\'s have a sneak peek into what Riverpod 3.0 will be about.',
   ),
-  majid(
-    name: 'Majid Hajian',
-    title: 'A great Flutter session',
-    xAccountName: 'mhadaily',
-    logoAssetName: 'resources/images/majid_profile.jpg',
-    desc:
-        'Flutter / Dart GDE, Organizer of Flutter Vikings, the author of flutterengineering.io',
-    day: Day.day2,
-    time: '6:20 pm ~ 7:00 pm',
-    talkDescription: 'TBA',
-  ),
   abdelrahman(
     name: 'Abdelrahman Eba',
     title:
@@ -260,8 +249,8 @@ In this session, we will discuss the following.
     xAccountName: 'tsuyoshi_chujo',
     logoAssetName: 'resources/images/tsuyoshi-chujo.jpg',
     desc: 'Freelance mobile apps developer',
-    day: Day.day1,
-    time: '6:45 pm ~ 7:15 pm',
+    day: Day.day2,
+    time: '6:20 pm ~ 6:50 pm',
     talkDescription:
         '''One of the most important concepts of Flutter is the “Widget tree.” Widgets’ styles are provided through the widget tree, the widget tree manages states, and rebuilds are optimized based on the mechanism of the widget tree. Understanding how widget tree works is crucial to enhancing the quality of our apps.
 
@@ -302,7 +291,7 @@ Additionally, attendees will gain insights into the development process behind f
     logoAssetName: 'resources/images/kevin.png',
     desc: 'Senior Solutions Engineer, Codemagic(Plutinum Sponsor)',
     day: Day.day1,
-    time: '5:10 pm ~ 5:40 pm',
+    time: '5:25 pm ~ 5:55 pm',
     talkDescription:
         'Kevin Suhajda is a Senior Solutions Engineer at Codemagic with over a decade of experience working in the mobile applications space. Using his background in mobile application development he has helped hundreds of mobile development teams set up efficient CI/CD pipelines to build, test, and publish their apps to app stores.',
   ),

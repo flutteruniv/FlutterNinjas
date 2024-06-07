@@ -4,6 +4,11 @@ enum OrganizerType {
     xAccountName: 'kboy_silvergym',
     logoAssetName: 'resources/images/kboy.jpeg',
   ),
+  majid(
+    name: 'Majid Hajian',
+    xAccountName: 'mhadaily',
+    logoAssetName: 'resources/images/majid_profile.jpg',
+  ),
   kosuke(
     name: 'Kosuke Saigusa',
     xAccountName: 'KosukeSaigusa',
