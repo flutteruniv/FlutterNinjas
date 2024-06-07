@@ -103,10 +103,10 @@ class Day1ListView extends StatelessWidget {
         BreakWidget('', 'Coffee Break☕'),
         SessionWidget(SpeakerType.aoi),
         SessionWidget(SpeakerType.marcin),
-        SessionWidget(SpeakerType.kevin),
         BreakWidget('', 'Coffee Break☕'),
+        SessionWidget(SpeakerType.kevin),
         SessionWidget(SpeakerType.kakeru),
-        SessionWidget(SpeakerType.tsuyoshi),
+        BreakWidget('6:30 pm ~ 6:45 pm', '️Closing'),
       ],
     );
   }
@@ -139,7 +139,8 @@ class Day2ListView extends StatelessWidget {
         SessionWidget(SpeakerType.abdelrahman),
         BreakWidget('', 'Coffee Break☕️'),
         SessionWidget(SpeakerType.moritz),
-        SessionWidget(SpeakerType.majid),
+        SessionWidget(SpeakerType.tsuyoshi),
+        BreakWidget('7:00 pm ~ 7:15 pm', '️Closing'),
         BreakWidget('7:30 pm ~ 9:00 pm', '️Networking & Dinner🍣'),
         // BreakWidget(
         //     '9:30 pm ~ 11:30 pm', '️After Izakaya Party 🍺 @TBD'),
