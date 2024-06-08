@@ -69,6 +69,7 @@ class SponsorsWidget extends StatelessWidget {
                   color: AppColor.themeBrown,
                 ),
           ),
+          SizedBox(height: isMobile ? 16 : 24),
           GridView.count(
             crossAxisCount: isMobile ? 1 : 1,
             childAspectRatio: 40 / 6,
@@ -78,6 +79,7 @@ class SponsorsWidget extends StatelessWidget {
                 .map((sponsor) => SwagSponsorItemWidget(type: sponsor))
                 .toList(),
           ),
+          SizedBox(height: isMobile ? 16 : 24),
           const SizedBox(height: 80),
           SelectableText(
             'Community',
