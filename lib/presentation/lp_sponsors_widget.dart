@@ -89,6 +89,7 @@ class SponsorsWidget extends StatelessWidget {
                   color: Colors.white,
                 ),
           ),
+          SizedBox(height: isMobile ? 16 : 24),
           GridView.count(
             crossAxisCount: isMobile ? 2 : 6,
             childAspectRatio: 1,
@@ -100,7 +101,6 @@ class SponsorsWidget extends StatelessWidget {
                 .map((sponsor) => CommunitySponsorItemWidget(type: sponsor))
                 .toList(),
           ),
-          SizedBox(height: isMobile ? 80 : 90),
           SelectableText(
             'Community sponsorship is still available.\nNote that it doesn\'t include an attendee ticket.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
