@@ -94,7 +94,7 @@ class Day1ListView extends StatelessWidget {
         ),
         BreakWidget('9:30 am', 'Door Open'),
         BreakWidget('10:00 am ~ 10:15 am', 'Opening talk'),
-        SessionWidget(SpeakerType.remi),
+        SessionWidget(SpeakerType.kevin),
         SessionWidget(SpeakerType.parth),
         BreakWidget('', 'Lunch Break🍙'),
         SessionWidget(SpeakerType.manuela),
@@ -104,9 +104,9 @@ class Day1ListView extends StatelessWidget {
         SessionWidget(SpeakerType.aoi),
         SessionWidget(SpeakerType.marcin),
         BreakWidget('', 'Coffee Break☕'),
-        SessionWidget(SpeakerType.kevin),
+        SessionWidget(SpeakerType.remi),
         SessionWidget(SpeakerType.kakeru),
-        BreakWidget('6:30 pm ~ 6:45 pm', '️Closing'),
+        BreakWidget('6:30 pm ~ 6:45 pm', '️Closing @BRIDGE'),
       ],
     );
   }
@@ -140,7 +140,8 @@ class Day2ListView extends StatelessWidget {
         BreakWidget('', 'Coffee Break☕️'),
         SessionWidget(SpeakerType.moritz),
         SessionWidget(SpeakerType.tsuyoshi),
-        BreakWidget('7:00 pm ~ 7:15 pm', '️Closing'),
+        BreakWidget('6:30 pm ~ 7:00 pm', '️Special Panel Discussion'),
+        BreakWidget('7:00 pm ~ 7:15 pm', '️Closing @PARK'),
         BreakWidget('7:30 pm ~ 9:00 pm', '️Networking & Dinner🍣'),
         // BreakWidget(
         //     '9:30 pm ~ 11:30 pm', '️After Izakaya Party 🍺 @TBD'),

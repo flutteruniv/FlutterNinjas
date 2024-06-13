@@ -105,10 +105,7 @@ class Regular extends StatelessWidget {
     return Column(
       children: [
         TextButton(
-          onPressed: () {
-            launchUrlString(
-                'https://ti.to/flutterninjas/tokyo-2024/with/regular');
-          },
+          onPressed: null,
           child: Image.asset(
             'resources/images/regular.png',
             fit: BoxFit.contain,
@@ -119,14 +116,11 @@ class Regular extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColor.ninjaBlack,
           ),
-          onPressed: () {
-            launchUrlString(
-                'https://ti.to/flutterninjas/tokyo-2024/with/regular');
-          },
+          onPressed: null,
           child: const Padding(
             padding: EdgeInsets.all(8),
             child: Text(
-              'Buy Regular',
+              'Close',
               style: TextStyle(fontSize: 16),
             ),
           ),

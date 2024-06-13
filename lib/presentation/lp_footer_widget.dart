@@ -30,16 +30,6 @@ class FooterWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SelectableText(
-            'Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.',
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  fontSize: 11,
-                  color: Colors.black,
-                ),
-          ),
-          SizedBox(
-            height: isMobile ? 16 : 32,
-          ),
           isMobile
               ? Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

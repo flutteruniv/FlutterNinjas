@@ -99,3 +99,22 @@ enum CommunitySponsorType {
   final String url;
   final String logoAssetName;
 }
+
+enum SwagSponsorType {
+  flutter(
+    name: 'Flutter',
+    url: 'https://flutter.dev/',
+    logoAssetName: 'resources/images/flutter.png',
+  ),
+  ;
+
+  const SwagSponsorType({
+    required this.name,
+    required this.url,
+    required this.logoAssetName,
+  });
+
+  final String name;
+  final String url;
+  final String logoAssetName;
+}

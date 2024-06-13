@@ -60,6 +60,26 @@ class SponsorsWidget extends StatelessWidget {
                 .map((sponsor) => GoldSponsorItemWidget(type: sponsor))
                 .toList(),
           ),
+          SizedBox(height: isMobile ? 80 : 90),
+          SelectableText(
+            'Swag',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                  fontSize: isMobile ? 28 : 56,
+                  height: 1,
+                  color: AppColor.themeBrown,
+                ),
+          ),
+          SizedBox(height: isMobile ? 16 : 24),
+          GridView.count(
+            crossAxisCount: isMobile ? 1 : 1,
+            childAspectRatio: 40 / 6,
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            children: SwagSponsorType.values
+                .map((sponsor) => SwagSponsorItemWidget(type: sponsor))
+                .toList(),
+          ),
+          SizedBox(height: isMobile ? 16 : 24),
           const SizedBox(height: 80),
           SelectableText(
             'Community',
@@ -69,6 +89,7 @@ class SponsorsWidget extends StatelessWidget {
                   color: Colors.white,
                 ),
           ),
+          SizedBox(height: isMobile ? 16 : 24),
           GridView.count(
             crossAxisCount: isMobile ? 2 : 6,
             childAspectRatio: 1,
@@ -80,9 +101,8 @@ class SponsorsWidget extends StatelessWidget {
                 .map((sponsor) => CommunitySponsorItemWidget(type: sponsor))
                 .toList(),
           ),
-          const SizedBox(height: 80),
           SelectableText(
-            'Sponsorship is from \$330.\nPersonal sponsor is also welcome!',
+            'Community sponsorship is still available.\nNote that it doesn\'t include an attendee ticket.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
@@ -95,12 +115,12 @@ class SponsorsWidget extends StatelessWidget {
               backgroundColor: AppColor.ninjaBlack,
             ),
             onPressed: () {
-              launchUrlString('https://forms.gle/XMQjj9D4QPc3yy66A');
+              launchUrlString('https://buy.stripe.com/3cscPW73x9ah9P26oo');
             },
             child: const Padding(
               padding: EdgeInsets.all(16),
               child: Text(
-                'Be a sponsor!',
+                'Be a sponsor',
                 style: TextStyle(fontSize: 32),
               ),
             ),
@@ -182,6 +202,32 @@ class CommunitySponsorItemWidget extends StatelessWidget {
         padding: const EdgeInsets.all(24),
         child: Image.asset(
           type.logoAssetName,
+        ),
+      ),
+    );
+  }
+}
+
+class SwagSponsorItemWidget extends StatelessWidget {
+  const SwagSponsorItemWidget({
+    super.key,
+    required this.type,
+  });
+  final SwagSponsorType type;
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = context.watch<LPModel>().isMobile;
+
+    return InkWell(
+      onTap: () {
+        launchUrlString(type.url);
+      },
+      child: Padding(
+        padding: EdgeInsets.all(isMobile ? 4 : 20),
+        child: Image.asset(
+          type.logoAssetName,
+          fit: BoxFit.contain,
         ),
       ),
     );
