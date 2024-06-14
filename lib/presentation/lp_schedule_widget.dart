@@ -138,7 +138,6 @@ class Day2ListView extends StatelessWidget {
         SessionWidget(SpeakerType.renuka),
         SessionWidget(SpeakerType.abdelrahman),
         BreakWidget('', 'Coffee Break☕️'),
-        SessionWidget(SpeakerType.moritz),
         SessionWidget(SpeakerType.tsuyoshi),
         BreakWidget('6:30 pm ~ 7:00 pm', '️Special Panel Discussion'),
         BreakWidget('7:00 pm ~ 7:15 pm', '️Closing @PARK'),
