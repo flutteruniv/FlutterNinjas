@@ -1,3 +1,4 @@
+import 'package:flutterninjas/presentation/2024/lp_2024_page.dart';
 import 'package:flutterninjas/presentation/tokusho_page.dart';
 import 'package:go_router/go_router.dart';
 
@@ -31,6 +32,10 @@ class Routes {
       GoRoute(
         path: PrivacyPolicyPage.route,
         builder: (context, state) => const PrivacyPolicyPage(),
+      ),
+      GoRoute(
+        path: LP2024Page.route,
+        builder: (context, state) => const LP2024Page(),
       ),
     ],
     errorPageBuilder: (context, state) {

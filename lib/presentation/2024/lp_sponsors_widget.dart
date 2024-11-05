@@ -4,14 +4,14 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../config/app_color.dart';
-import 'lp_base_container.dart';
-import 'lp_model.dart';
+import '../lp_base_container.dart';
+import 'lp_2024_model.dart';
 
-class SponsorsWidget extends StatelessWidget {
-  const SponsorsWidget({super.key});
+class Sponsors2024Widget extends StatelessWidget {
+  const Sponsors2024Widget({super.key});
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
     return LPBaseContainer(
       isMobile: isMobile,
       child: Column(
@@ -140,7 +140,7 @@ class PlatinumSponsorItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
 
     return InkWell(
       onTap: () {
@@ -166,7 +166,7 @@ class GoldSponsorItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
 
     return InkWell(
       onTap: () {
@@ -192,7 +192,7 @@ class CommunitySponsorItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
 
     return InkWell(
       onTap: () {
@@ -217,7 +217,7 @@ class SwagSponsorItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
 
     return InkWell(
       onTap: () {

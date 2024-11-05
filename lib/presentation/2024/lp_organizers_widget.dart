@@ -3,15 +3,15 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/link.dart';
 
 import '../../domain/organizer_type.dart';
-import 'lp_base_container.dart';
-import 'lp_model.dart';
+import '../lp_base_container.dart';
+import 'lp_2024_model.dart';
 
-class OrganizersWidget extends StatelessWidget {
-  const OrganizersWidget({super.key});
+class Organizers2024Widget extends StatelessWidget {
+  const Organizers2024Widget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
 
     return LPBaseContainer(
       isMobile: isMobile,
@@ -49,7 +49,7 @@ class OrganizerItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,

@@ -3,14 +3,14 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../config/app_color.dart';
-import 'lp_base_container.dart';
-import 'lp_model.dart';
+import '../lp_base_container.dart';
+import 'lp_2024_model.dart';
 
-class TicketsWidget extends StatelessWidget {
-  const TicketsWidget({super.key});
+class Tickets2024Widget extends StatelessWidget {
+  const Tickets2024Widget({super.key});
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
     return LPBaseContainer(
       isMobile: isMobile,
       child: Column(
@@ -23,45 +23,37 @@ class TicketsWidget extends StatelessWidget {
                   height: 1,
                 ),
           ),
-          const SizedBox(
-            height: 16,
-          ),
+          const SizedBox(height: 16),
           SelectableText(
-            'Coming soon..',
+            'The ticket contains\n・2 days of FlutterNinjas💻\n・Asking the speakers🙋‍️\n・Coffee and some drinks☕️\n・Lunch for 2 days🍙\n・Dinner for 2nd day🥘\n・Pre-party🥳\n・flutterengineering.io from Majid Hajian📘\n・Slack community💬\n・Some special gifts🎁\n\nThe earlier you buy, the more you save.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white,
                 ),
           ),
-          // SelectableText(
-          //   'The ticket contains\n・2 days of FlutterNinjas💻\n・Asking the speakers🙋‍️\n・Coffee and some drinks☕️\n・Lunch for 2 days🍙\n・Dinner for 2nd day🥘\n・Pre-party🥳\n・flutterengineering.io from Majid Hajian📘\n・Slack community💬\n・Some special gifts🎁\n\nThe earlier you buy, the more you save.',
-          //   style: Theme.of(context).textTheme.titleMedium!.copyWith(
-          //         color: Colors.white,
-          //       ),
-          // ),
-          // const SizedBox(height: 32),
-          // isMobile
-          //     ? const Column(
-          //         children: [
-          //           EarlyBird(),
-          //           SizedBox(height: 32),
-          //           Regular(),
-          //           SizedBox(height: 32),
-          //           LateBird(),
-          //         ],
-          //       )
-          //     : const Row(
-          //         children: [
-          //           Expanded(
-          //             child: EarlyBird(),
-          //           ),
-          //           Expanded(
-          //             child: Regular(),
-          //           ),
-          //           Expanded(
-          //             child: LateBird(),
-          //           ),
-          //         ],
-          //       ),
+          const SizedBox(height: 32),
+          isMobile
+              ? const Column(
+                  children: [
+                    EarlyBird(),
+                    SizedBox(height: 32),
+                    Regular(),
+                    SizedBox(height: 32),
+                    LateBird(),
+                  ],
+                )
+              : const Row(
+                  children: [
+                    Expanded(
+                      child: EarlyBird(),
+                    ),
+                    Expanded(
+                      child: Regular(),
+                    ),
+                    Expanded(
+                      child: LateBird(),
+                    ),
+                  ],
+                ),
         ],
       ),
     );

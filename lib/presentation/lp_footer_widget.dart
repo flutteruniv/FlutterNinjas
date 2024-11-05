@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutterninjas/presentation/2024/lp_2024_page.dart';
 import 'package:flutterninjas/presentation/tokusho_page.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../config/app_color.dart';
-import 'lp_model.dart';
 import 'privacy_page.dart';
 import 'term_page.dart';
 
 class FooterWidget extends StatelessWidget {
-  const FooterWidget({super.key});
+  const FooterWidget({super.key, required this.isMobile});
+
+  final bool isMobile;
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
-
     return Container(
       color: Colors.white,
       padding: isMobile
@@ -66,7 +65,7 @@ class FooterWidget extends StatelessWidget {
                     ),
                     InkWell(
                       child: Text(
-                        '特定商取引法に基づく表記',
+                        'Act on specified commercial transactions',
                         style:
                             Theme.of(context).textTheme.titleMedium?.copyWith(
                                   fontSize: 14,
@@ -108,10 +107,25 @@ class FooterWidget extends StatelessWidget {
                           launchUrlString('https://twitter.com/FlutterNinjas'),
                     ),
                     const SizedBox(
+                      height: 16,
+                    ),
+                    InkWell(
+                      child: Text(
+                        '2024',
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
+                      ),
+                      onTap: () => context.go(LP2024Page.route),
+                    ),
+                    const SizedBox(
                       height: 32,
                     ),
                     SelectableText(
-                      '© 2024 FlutterNinjas',
+                      '© 2025 FlutterNinjas',
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -138,12 +152,7 @@ class FooterWidget extends StatelessWidget {
                       ),
                       onTap: () => context.go(TermPage.route),
                     ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 16),
-                      width: 1,
-                      height: 24,
-                      color: AppColor.primaryBlue,
-                    ),
+                    const VerticalLine(),
                     InkWell(
                       child: Text(
                         'Privacy Policy',
@@ -156,15 +165,10 @@ class FooterWidget extends StatelessWidget {
                       ),
                       onTap: () => context.go(PrivacyPolicyPage.route),
                     ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 16),
-                      width: 1,
-                      height: 24,
-                      color: AppColor.primaryBlue,
-                    ),
+                    const VerticalLine(),
                     InkWell(
                       child: Text(
-                        '特定商取引法に基づく表記',
+                        'Act on specified commercial transactions',
                         style:
                             Theme.of(context).textTheme.titleMedium?.copyWith(
                                   fontSize: 14,
@@ -174,12 +178,7 @@ class FooterWidget extends StatelessWidget {
                       ),
                       onTap: () => context.go(TokushoPage.route),
                     ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 16),
-                      width: 1,
-                      height: 24,
-                      color: AppColor.primaryBlue,
-                    ),
+                    const VerticalLine(),
                     InkWell(
                       child: Text(
                         'Company',
@@ -192,12 +191,7 @@ class FooterWidget extends StatelessWidget {
                       ),
                       onTap: () => launchUrlString('https://kboy.jp'),
                     ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 16),
-                      width: 1,
-                      height: 24,
-                      color: AppColor.primaryBlue,
-                    ),
+                    const VerticalLine(),
                     InkWell(
                       child: Text(
                         'Contact',
@@ -211,9 +205,22 @@ class FooterWidget extends StatelessWidget {
                       onTap: () =>
                           launchUrlString('https://twitter.com/FlutterNinjas'),
                     ),
+                    const VerticalLine(),
+                    InkWell(
+                      child: Text(
+                        '2024',
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
+                      ),
+                      onTap: () => context.go(LP2024Page.route),
+                    ),
                     const Spacer(),
                     SelectableText(
-                      '© 2024 FlutterNinjas',
+                      '© 2025 FlutterNinjas',
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -224,6 +231,22 @@ class FooterWidget extends StatelessWidget {
                 ),
         ],
       ),
+    );
+  }
+}
+
+class VerticalLine extends StatelessWidget {
+  const VerticalLine({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      width: 1,
+      height: 24,
+      color: AppColor.primaryBlue,
     );
   }
 }
