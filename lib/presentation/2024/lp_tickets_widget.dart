@@ -140,13 +140,13 @@ class LateBird extends StatelessWidget {
     return Column(
       children: [
         TextButton(
-          onPressed: () {
-            launchUrlString(
-                'https://ti.to/flutterninjas/tokyo-2024/with/late-bird');
-          },
-          child: Image.asset(
-            'resources/images/late-bird.png',
-            fit: BoxFit.contain,
+          onPressed: null,
+          child: Opacity(
+            opacity: 0.5,
+            child: Image.asset(
+              'resources/images/late-bird.png',
+              fit: BoxFit.contain,
+            ),
           ),
         ),
         const SizedBox(height: 4),
@@ -154,14 +154,11 @@ class LateBird extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColor.ninjaBlack,
           ),
-          onPressed: () {
-            launchUrlString(
-                'https://ti.to/flutterninjas/tokyo-2024/with/late-bird');
-          },
+          onPressed: null,
           child: const Padding(
             padding: EdgeInsets.all(8),
             child: Text(
-              'Buy Late-Bird',
+              'Close',
               style: TextStyle(fontSize: 16),
             ),
           ),
