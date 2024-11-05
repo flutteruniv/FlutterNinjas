@@ -8,7 +8,6 @@ import 'lp_model.dart';
 import 'lp_outline_widget.dart';
 import 'lp_tickets_widget.dart';
 import 'lp_top_widget.dart';
-import 'lp_venue_widget.dart';
 
 class LPPage extends StatelessWidget {
   const LPPage({super.key});
@@ -35,7 +34,7 @@ class LPPage extends StatelessWidget {
                     //ScheduleWidget(),
                     //SpeakersWidget(),
                     //SponsorsWidget(),
-                    const VenueWidget(),
+                    //const VenueWidget(),
                     //QAWidget(),
                     //OrganizersWidget(),
                     FooterWidget(isMobile: model.isMobile),
