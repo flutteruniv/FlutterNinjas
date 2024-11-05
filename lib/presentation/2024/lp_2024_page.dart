@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutterninjas/presentation/lp_header_appbar.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../lp_footer_widget.dart';
 import 'lp_2024_model.dart';
+import 'lp_header_appbar.dart';
 import 'lp_organizers_widget.dart';
 import 'lp_outline_widget.dart';
 import 'lp_qa_widget.dart';
@@ -28,7 +28,7 @@ class LP2024Page extends StatelessWidget {
           final model = context.read<LP2024Model>();
           model.setSizingInformation(sizingInformation);
           return Scaffold(
-            appBar: const HeaderAppBar(),
+            appBar: const Header2024AppBar(),
             body: SingleChildScrollView(
               child: Center(
                 child: Column(
