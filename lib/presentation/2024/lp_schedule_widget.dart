@@ -4,14 +4,14 @@ import 'package:flutterninjas/domain/speaker_type.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'lp_base_container.dart';
-import 'lp_model.dart';
+import '../lp_base_container.dart';
+import 'lp_2024_model.dart';
 
-class ScheduleWidget extends StatelessWidget {
-  const ScheduleWidget({super.key});
+class Schedule2024Widget extends StatelessWidget {
+  const Schedule2024Widget({super.key});
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
     return LPBaseContainer(
       isMobile: isMobile,
       child: Column(
@@ -176,7 +176,7 @@ class SessionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
 
     return InkWell(
       onTap: () {
@@ -323,7 +323,7 @@ class BreakWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
 
     return SizedBox(
       height: 95,

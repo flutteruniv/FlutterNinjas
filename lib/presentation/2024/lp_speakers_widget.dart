@@ -3,15 +3,15 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/link.dart';
 
 import '../../domain/speaker_type.dart';
-import 'lp_base_container.dart';
-import 'lp_model.dart';
+import '../lp_base_container.dart';
+import 'lp_2024_model.dart';
 
-class SpeakersWidget extends StatelessWidget {
-  const SpeakersWidget({super.key});
+class Speakers2024Widget extends StatelessWidget {
+  const Speakers2024Widget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
 
     return LPBaseContainer(
       isMobile: isMobile,
@@ -52,7 +52,7 @@ class SpeakerItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import 'lp_base_container.dart';
-import 'lp_model.dart';
+import '../lp_base_container.dart';
+import 'lp_2024_model.dart';
 
-class VenueWidget extends StatelessWidget {
-  const VenueWidget({super.key});
+class Venue2024Widget extends StatelessWidget {
+  const Venue2024Widget({super.key});
   @override
   Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
+    final isMobile = context.watch<LP2024Model>().isMobile;
     return LPBaseContainer(
       isMobile: isMobile,
       child: Column(
@@ -86,22 +86,22 @@ class VenueWidget extends StatelessWidget {
               )
             ],
           ),
-          // const SizedBox(height: 80),
-          // SelectableText(
-          //   'Floor Map',
-          //   style: Theme.of(context).textTheme.displayLarge?.copyWith(
-          //         fontSize: isMobile ? 28 : 56,
-          //         height: 1,
-          //         color: Colors.white,
-          //       ),
-          // ),
-          // const SizedBox(
-          //   height: 16,
-          // ),
-          // Image.asset(
-          //   'resources/images/floor_map.png',
-          //   fit: BoxFit.cover,
-          // ),
+          const SizedBox(height: 80),
+          SelectableText(
+            'Floor Map',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                  fontSize: isMobile ? 28 : 56,
+                  height: 1,
+                  color: Colors.white,
+                ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          Image.asset(
+            'resources/images/floor_map.png',
+            fit: BoxFit.cover,
+          ),
         ],
       ),
     );
