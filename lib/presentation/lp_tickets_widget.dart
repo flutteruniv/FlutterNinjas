@@ -26,44 +26,72 @@ class TicketsWidget extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          SelectableText(
-            'Coming soon..',
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: Colors.white,
+          isMobile
+              ? const Column(
+                  children: [
+                    SuperEarlyBird(),
+                    SizedBox(height: 32),
+                    EarlyBird(),
+                    SizedBox(height: 32),
+                    Regular(),
+                  ],
+                )
+              : const Row(
+                  children: [
+                    Expanded(
+                      child: SuperEarlyBird(),
+                    ),
+                    Expanded(
+                      child: EarlyBird(),
+                    ),
+                    Expanded(
+                      child: Regular(),
+                    ),
+                  ],
                 ),
-          ),
-          // SelectableText(
-          //   'The ticket contains\n・2 days of FlutterNinjas💻\n・Asking the speakers🙋‍️\n・Coffee and some drinks☕️\n・Lunch for 2 days🍙\n・Dinner for 2nd day🥘\n・Pre-party🥳\n・flutterengineering.io from Majid Hajian📘\n・Slack community💬\n・Some special gifts🎁\n\nThe earlier you buy, the more you save.',
-          //   style: Theme.of(context).textTheme.titleMedium!.copyWith(
-          //         color: Colors.white,
-          //       ),
-          // ),
-          // const SizedBox(height: 32),
-          // isMobile
-          //     ? const Column(
-          //         children: [
-          //           EarlyBird(),
-          //           SizedBox(height: 32),
-          //           Regular(),
-          //           SizedBox(height: 32),
-          //           LateBird(),
-          //         ],
-          //       )
-          //     : const Row(
-          //         children: [
-          //           Expanded(
-          //             child: EarlyBird(),
-          //           ),
-          //           Expanded(
-          //             child: Regular(),
-          //           ),
-          //           Expanded(
-          //             child: LateBird(),
-          //           ),
-          //         ],
-          //       ),
         ],
       ),
+    );
+  }
+}
+
+class SuperEarlyBird extends StatelessWidget {
+  const SuperEarlyBird({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        TextButton(
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2025/with/super-early-bird');
+          },
+          child: Image.asset(
+            'resources/images/early-bird.png',
+            fit: BoxFit.contain,
+          ),
+        ),
+        const SizedBox(height: 4),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColor.ninjaBlack,
+          ),
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2025/with/super-early-bird');
+          },
+          child: const Padding(
+            padding: EdgeInsets.all(8),
+            child: Text(
+              'Be Super',
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -78,7 +106,10 @@ class EarlyBird extends StatelessWidget {
     return Column(
       children: [
         TextButton(
-          onPressed: null,
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2025/with/early-bird');
+          },
           child: Image.asset(
             'resources/images/early-bird.png',
             fit: BoxFit.contain,
@@ -89,11 +120,14 @@ class EarlyBird extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColor.ninjaBlack,
           ),
-          onPressed: null,
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2025/with/early-bird');
+          },
           child: const Padding(
             padding: EdgeInsets.all(8),
             child: Text(
-              'Sold Out',
+              'Buy Early-Bird',
               style: TextStyle(fontSize: 16),
             ),
           ),
@@ -113,7 +147,10 @@ class Regular extends StatelessWidget {
     return Column(
       children: [
         TextButton(
-          onPressed: null,
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2025/with/regular');
+          },
           child: Image.asset(
             'resources/images/regular.png',
             fit: BoxFit.contain,
@@ -124,11 +161,14 @@ class Regular extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColor.ninjaBlack,
           ),
-          onPressed: null,
+          onPressed: () {
+            launchUrlString(
+                'https://ti.to/flutterninjas/tokyo-2025/with/regular');
+          },
           child: const Padding(
             padding: EdgeInsets.all(8),
             child: Text(
-              'Close',
+              'Buy Regular',
               style: TextStyle(fontSize: 16),
             ),
           ),
@@ -150,7 +190,7 @@ class LateBird extends StatelessWidget {
         TextButton(
           onPressed: () {
             launchUrlString(
-                'https://ti.to/flutterninjas/tokyo-2024/with/late-bird');
+                'https://ti.to/flutterninjas/tokyo-2025/with/late-bird');
           },
           child: Image.asset(
             'resources/images/late-bird.png',

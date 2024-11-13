@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/link.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../domain/speaker_type.dart';
+import '../config/app_color.dart';
 import 'lp_base_container.dart';
 import 'lp_model.dart';
 
@@ -19,23 +21,21 @@ class SpeakersWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SelectableText(
-            'Speakers',
+            'CfPs',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 42 : 156,
                   height: 1,
                 ),
           ),
           SizedBox(height: isMobile ? 20 : 40),
-          GridView.count(
-            mainAxisSpacing: 8,
-            crossAxisSpacing: 8,
-            childAspectRatio: isMobile ? 15 / 10 : 8 / 10,
-            crossAxisCount: isMobile ? 1 : 3,
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            children: SpeakerType.values
-                .map((speaker) => SpeakerItemWidget(speakerType: speaker))
-                .toList(),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColor.ninjaBlack,
+            ),
+            onPressed: () {
+              launchUrlString('https://sessionize.com/flutterninjas-2025/');
+            },
+            child: const Text('Submit your talk!'),
           ),
         ],
       ),

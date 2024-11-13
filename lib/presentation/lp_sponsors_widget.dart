@@ -24,106 +24,15 @@ class SponsorsWidget extends StatelessWidget {
                   height: 1,
                 ),
           ),
-          const SizedBox(height: 80),
-          SelectableText(
-            'Platinum',
-            style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                  fontSize: isMobile ? 28 : 56,
-                  height: 1,
-                  color: AppColor.platinum,
-                ),
-          ),
-          GridView.count(
-            crossAxisCount: isMobile ? 1 : 1,
-            childAspectRatio: 10 / 2,
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            children: PlatinumSponsorType.values
-                .map((sponsor) => PlatinumSponsorItemWidget(type: sponsor))
-                .toList(),
-          ),
-          SizedBox(height: isMobile ? 80 : 90),
-          SelectableText(
-            'Gold',
-            style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                  fontSize: isMobile ? 28 : 56,
-                  height: 1,
-                  color: AppColor.primaryYellowColor,
-                ),
-          ),
-          GridView.count(
-            crossAxisCount: isMobile ? 1 : 1,
-            childAspectRatio: 10 / 2,
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            children: GoldSponsorType.values
-                .map((sponsor) => GoldSponsorItemWidget(type: sponsor))
-                .toList(),
-          ),
-          SizedBox(height: isMobile ? 80 : 90),
-          SelectableText(
-            'Swag',
-            style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                  fontSize: isMobile ? 28 : 56,
-                  height: 1,
-                  color: AppColor.themeBrown,
-                ),
-          ),
-          SizedBox(height: isMobile ? 16 : 24),
-          GridView.count(
-            crossAxisCount: isMobile ? 1 : 1,
-            childAspectRatio: 40 / 6,
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            children: SwagSponsorType.values
-                .map((sponsor) => SwagSponsorItemWidget(type: sponsor))
-                .toList(),
-          ),
-          SizedBox(height: isMobile ? 16 : 24),
-          const SizedBox(height: 80),
-          SelectableText(
-            'Community',
-            style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                  fontSize: isMobile ? 28 : 56,
-                  height: 1,
-                  color: Colors.white,
-                ),
-          ),
-          SizedBox(height: isMobile ? 16 : 24),
-          GridView.count(
-            crossAxisCount: isMobile ? 2 : 6,
-            childAspectRatio: 1,
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            mainAxisSpacing: 8,
-            crossAxisSpacing: 16,
-            children: CommunitySponsorType.values
-                .map((sponsor) => CommunitySponsorItemWidget(type: sponsor))
-                .toList(),
-          ),
-          SelectableText(
-            'Community sponsorship is still available.\nNote that it doesn\'t include an attendee ticket.',
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
-                ),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 16),
+          SizedBox(height: isMobile ? 20 : 40),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColor.ninjaBlack,
             ),
             onPressed: () {
-              launchUrlString('https://buy.stripe.com/3cscPW73x9ah9P26oo');
+              launchUrlString('https://forms.gle/XMQjj9D4QPc3yy66A');
             },
-            child: const Padding(
-              padding: EdgeInsets.all(16),
-              child: Text(
-                'Be a sponsor',
-                style: TextStyle(fontSize: 32),
-              ),
-            ),
+            child: const Text('Contact us!'),
           ),
         ],
       ),
