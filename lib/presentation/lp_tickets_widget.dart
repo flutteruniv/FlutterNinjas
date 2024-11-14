@@ -70,7 +70,7 @@ class SuperEarlyBird extends StatelessWidget {
                 'https://ti.to/flutterninjas/tokyo-2025/with/super-early-bird');
           },
           child: Image.asset(
-            'resources/images/early-bird.png',
+            'resources/images/super-early-bird-2025.png',
             fit: BoxFit.contain,
           ),
         ),
@@ -86,7 +86,7 @@ class SuperEarlyBird extends StatelessWidget {
           child: const Padding(
             padding: EdgeInsets.all(8),
             child: Text(
-              'Be Super',
+              'Buy Super Early-Bird',
               style: TextStyle(fontSize: 16),
             ),
           ),
@@ -111,7 +111,7 @@ class EarlyBird extends StatelessWidget {
                 'https://ti.to/flutterninjas/tokyo-2025/with/early-bird');
           },
           child: Image.asset(
-            'resources/images/early-bird.png',
+            'resources/images/early-bird-2025.png',
             fit: BoxFit.contain,
           ),
         ),
@@ -152,7 +152,7 @@ class Regular extends StatelessWidget {
                 'https://ti.to/flutterninjas/tokyo-2025/with/regular');
           },
           child: Image.asset(
-            'resources/images/regular.png',
+            'resources/images/regular-2025.png',
             fit: BoxFit.contain,
           ),
         ),
@@ -193,7 +193,7 @@ class LateBird extends StatelessWidget {
                 'https://ti.to/flutterninjas/tokyo-2025/with/late-bird');
           },
           child: Image.asset(
-            'resources/images/late-bird.png',
+            'resources/images/late-bird-2025.png',
             fit: BoxFit.contain,
           ),
         ),

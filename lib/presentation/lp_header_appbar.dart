@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../config/app_color.dart';
 
@@ -37,25 +38,7 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
                 backgroundColor: AppColor.ninjaBlack,
               ),
               onPressed: () {
-                // launchUrlString('https://ti.to/flutterninjas/tokyo-2024');
-
-                // dialog for now
-                showDialog(
-                  context: context,
-                  builder: (context) {
-                    return AlertDialog(
-                      title: const Text('Coming soon..'),
-                      actions: <Widget>[
-                        TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: const Text('Close'),
-                        ),
-                      ],
-                    );
-                  },
-                );
+                launchUrlString('https://ti.to/flutterninjas/tokyo-2025');
               },
               child: const Text(
                 'Buy Ticket',
