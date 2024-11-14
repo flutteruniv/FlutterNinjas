@@ -3,15 +3,15 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../config/app_color.dart';
-import '../lp_base_container.dart';
 import 'lp_2024_model.dart';
+import 'lp_base_container_2024.dart';
 
 class Tickets2024Widget extends StatelessWidget {
   const Tickets2024Widget({super.key});
   @override
   Widget build(BuildContext context) {
     final isMobile = context.watch<LP2024Model>().isMobile;
-    return LPBaseContainer(
+    return LPBase2024Container(
       isMobile: isMobile,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

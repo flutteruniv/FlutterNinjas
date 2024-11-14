@@ -18,6 +18,10 @@ dependencies:
   go_router: ^10.0.0
   url_launcher: ^6.0.20
   flutter_html: ^3.0.0-beta.2
+  new_gradient_app_bar:
+    git:
+      url: https://github.com/CartdropLLC/NewGradientAppBar.git
+      ref: master
 
 dev_dependencies:
   flutter_test:

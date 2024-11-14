@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../config/app_color.dart';
+import '../../config/app_color.dart';
 
-class LPBaseContainer extends StatelessWidget {
-  const LPBaseContainer({
+class LPBase2024Container extends StatelessWidget {
+  const LPBase2024Container({
     super.key,
     required this.child,
     required this.isMobile,
@@ -24,14 +24,6 @@ class LPBaseContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          begin: Alignment.centerLeft,
-          end: Alignment.centerRight,
-          colors: <Color>[
-            AppColor.backgroundNavy,
-            Colors.black,
-          ],
-        ),
         color: color ?? AppColor.backgroundNavy,
         image: backgroundImageName != null
             ? DecorationImage(
