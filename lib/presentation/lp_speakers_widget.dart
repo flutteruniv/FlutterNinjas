@@ -21,7 +21,7 @@ class SpeakersWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SelectableText(
-            'CfPs',
+            'CfP',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 42 : 156,
                   height: 1,
