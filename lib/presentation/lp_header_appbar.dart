@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../config/app_color.dart';
 
@@ -9,8 +11,13 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: AppColor.backgroundNavy,
+    return NewGradientAppBar(
+      gradient: const LinearGradient(
+        colors: [
+          AppColor.backgroundNavy,
+          Colors.black,
+        ],
+      ),
       centerTitle: false,
       title: Padding(
         padding: const EdgeInsets.all(16),
@@ -32,33 +39,15 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
             ),
             const Spacer(),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColor.ninjaBlack,
-              ),
+            TextButton(
               onPressed: () {
-                // launchUrlString('https://ti.to/flutterninjas/tokyo-2024');
-
-                // dialog for now
-                showDialog(
-                  context: context,
-                  builder: (context) {
-                    return AlertDialog(
-                      title: const Text('Coming soon..'),
-                      actions: <Widget>[
-                        TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: const Text('Close'),
-                        ),
-                      ],
-                    );
-                  },
-                );
+                launchUrlString('https://ti.to/flutterninjas/tokyo-2025');
               },
               child: const Text(
                 'Buy Ticket',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
             ),
           ],

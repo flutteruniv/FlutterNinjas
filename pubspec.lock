@@ -184,6 +184,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+  new_gradient_app_bar:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: master
+      resolved-ref: bf3f324d4fd12d6275a467fb117f7517494d96b9
+      url: "https://github.com/CartdropLLC/NewGradientAppBar.git"
+    source: git
+    version: "0.3.0"
   path:
     dependency: transitive
     description:
@@ -366,5 +375,5 @@ packages:
     source: hosted
     version: "0.5.1"
 sdks:
-  dart: ">=3.3.0 <4.0.0"
+  dart: ">=3.4.0 <4.0.0"
   flutter: ">=3.19.0"

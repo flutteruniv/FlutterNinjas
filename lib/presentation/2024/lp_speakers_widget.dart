@@ -3,8 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/link.dart';
 
 import '../../domain/speaker_type.dart';
-import '../lp_base_container.dart';
 import 'lp_2024_model.dart';
+import 'lp_base_container_2024.dart';
 
 class Speakers2024Widget extends StatelessWidget {
   const Speakers2024Widget({super.key});
@@ -13,7 +13,7 @@ class Speakers2024Widget extends StatelessWidget {
   Widget build(BuildContext context) {
     final isMobile = context.watch<LP2024Model>().isMobile;
 
-    return LPBaseContainer(
+    return LPBase2024Container(
       isMobile: isMobile,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

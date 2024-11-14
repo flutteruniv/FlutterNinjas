@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutterninjas/domain/qa_type.dart';
 import 'package:provider/provider.dart';
 
-import '../lp_base_container.dart';
 import 'lp_2024_model.dart';
+import 'lp_base_container_2024.dart';
 
 class QA2024Widget extends StatelessWidget {
   const QA2024Widget({super.key});
   @override
   Widget build(BuildContext context) {
     final isMobile = context.watch<LP2024Model>().isMobile;
-    return LPBaseContainer(
+    return LPBase2024Container(
       isMobile: isMobile,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
