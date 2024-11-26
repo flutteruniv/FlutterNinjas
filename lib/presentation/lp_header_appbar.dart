@@ -21,33 +21,37 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: false,
       title: Padding(
         padding: const EdgeInsets.all(16),
-        child: Row(
+        child: OverflowBar(
+          alignment: MainAxisAlignment
+              .spaceBetween, 
           children: [
-            SizedBox(
-              width: 36,
-              child: Image.asset('resources/images/fn3B.png'),
+            Row(
+              mainAxisSize: MainAxisSize
+                  .min, 
+              children: [
+                SizedBox(
+                  width: 36,
+                  child: Image.asset('resources/images/fn3B.png'),
+                ),
+                const SizedBox(width: 8),
+                SelectableText(
+                  'FlutterNinjas 2025',
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                  maxLines: 1,
+                ),
+              ],
             ),
-            const SizedBox(
-              width: 8,
-            ),
-            SelectableText(
-              'FlutterNinjas 2025',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontSize: 16,
-                  ),
-            ),
-            const Spacer(),
             TextButton(
               onPressed: () {
                 launchUrlString('https://ti.to/flutterninjas/tokyo-2025');
               },
               child: const Text(
                 'Buy Ticket',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+                style: TextStyle(color: Colors.white),
               ),
             ),
           ],
