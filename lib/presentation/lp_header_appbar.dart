@@ -22,12 +22,10 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Padding(
         padding: const EdgeInsets.all(16),
         child: OverflowBar(
-          alignment: MainAxisAlignment
-              .spaceBetween, 
+          alignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
-              mainAxisSize: MainAxisSize
-                  .min, 
+              mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
                   width: 36,
@@ -45,13 +43,17 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ],
             ),
-            TextButton(
-              onPressed: () {
+            InkWell(
+              onTap: () {
                 launchUrlString('https://ti.to/flutterninjas/tokyo-2025');
               },
-              child: const Text(
+              child: Text(
                 'Buy Ticket',
-                style: TextStyle(color: Colors.white),
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
               ),
             ),
           ],
