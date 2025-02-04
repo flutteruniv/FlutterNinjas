@@ -29,8 +29,6 @@ class TicketsWidget extends StatelessWidget {
           isMobile
               ? const Column(
                   children: [
-                    SuperEarlyBird(),
-                    SizedBox(height: 32),
                     EarlyBird(),
                     SizedBox(height: 32),
                     Regular(),
@@ -38,9 +36,6 @@ class TicketsWidget extends StatelessWidget {
                 )
               : const Row(
                   children: [
-                    Expanded(
-                      child: SuperEarlyBird(),
-                    ),
                     Expanded(
                       child: EarlyBird(),
                     ),
@@ -65,13 +60,13 @@ class SuperEarlyBird extends StatelessWidget {
     return Column(
       children: [
         TextButton(
-          onPressed: () {
-            launchUrlString(
-                'https://ti.to/flutterninjas/tokyo-2025/with/super-early-bird');
-          },
-          child: Image.asset(
-            'resources/images/super-early-bird-2025.png',
-            fit: BoxFit.contain,
+          onPressed: null,
+          child: Opacity(
+            opacity: 0.25,
+            child: Image.asset(
+              'resources/images/super-early-bird-2025.png',
+              fit: BoxFit.contain,
+            ),
           ),
         ),
         const SizedBox(height: 4),
@@ -79,10 +74,7 @@ class SuperEarlyBird extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColor.ninjaBlack,
           ),
-          onPressed: () {
-            launchUrlString(
-                'https://ti.to/flutterninjas/tokyo-2025/with/super-early-bird');
-          },
+          onPressed: null,
           child: const Padding(
             padding: EdgeInsets.all(8),
             child: Text(
