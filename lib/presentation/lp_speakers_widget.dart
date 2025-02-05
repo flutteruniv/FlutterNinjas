@@ -35,7 +35,13 @@ class SpeakersWidget extends StatelessWidget {
             onPressed: () {
               launchUrlString('https://sessionize.com/flutterninjas-2025/');
             },
-            child: const Text('Submit your talk!'),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'Submit your talk!',
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
           ),
         ],
       ),

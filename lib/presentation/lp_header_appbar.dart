@@ -48,7 +48,7 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
                 launchUrlString('https://ti.to/flutterninjas/tokyo-2025');
               },
               child: Text(
-                'Buy Ticket',
+                '🎫 Buy Ticket',
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,

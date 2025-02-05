@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+import 'about_2024_widget.dart';
 import 'lp_footer_widget.dart';
 import 'lp_header_appbar.dart';
 import 'lp_model.dart';
@@ -10,6 +11,7 @@ import 'lp_speakers_widget.dart';
 import 'lp_sponsors_widget.dart';
 import 'lp_tickets_widget.dart';
 import 'lp_top_widget.dart';
+import 'lp_venue_widget.dart';
 
 class LPPage extends StatelessWidget {
   const LPPage({super.key});
@@ -36,7 +38,8 @@ class LPPage extends StatelessWidget {
                     //ScheduleWidget(),
                     const SpeakersWidget(),
                     const SponsorsWidget(),
-                    //const VenueWidget(),
+                    const VenueWidget(),
+                    const About2024Widget(),
                     //QAWidget(),
                     //OrganizersWidget(),
                     FooterWidget(isMobile: model.isMobile),

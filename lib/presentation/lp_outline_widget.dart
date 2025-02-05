@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../config/app_color.dart';
 import 'lp_base_container.dart';
 import 'lp_model.dart';
 
@@ -39,45 +38,6 @@ docomo R&D OPEN LAB ODAIBA
           ),
         ],
       ),
-    );
-  }
-}
-
-class FeatureListTile extends StatelessWidget {
-  const FeatureListTile({
-    super.key,
-    required this.title,
-    required this.description,
-  });
-  final String title;
-  final String description;
-
-  @override
-  Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SelectableText(
-          title,
-          style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                fontSize: isMobile ? 28 : 48,
-                fontWeight: FontWeight.bold,
-                color: AppColor.primaryBlue,
-              ),
-        ),
-        const SizedBox(
-          height: 8,
-        ),
-        SelectableText(
-          description,
-          style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                color: Colors.black,
-                fontWeight: FontWeight.normal,
-              ),
-        ),
-      ],
     );
   }
 }

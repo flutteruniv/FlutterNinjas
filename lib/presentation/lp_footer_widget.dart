@@ -95,7 +95,7 @@ class FooterWidget extends StatelessWidget {
                     ),
                     InkWell(
                       child: Text(
-                        'Contact',
+                        'X(Twitter)',
                         style:
                             Theme.of(context).textTheme.titleMedium?.copyWith(
                                   fontSize: 14,
@@ -111,7 +111,7 @@ class FooterWidget extends StatelessWidget {
                     ),
                     InkWell(
                       child: Text(
-                        '2024',
+                        '2024 Edition',
                         style:
                             Theme.of(context).textTheme.titleMedium?.copyWith(
                                   fontSize: 14,
@@ -194,7 +194,7 @@ class FooterWidget extends StatelessWidget {
                     const VerticalLine(),
                     InkWell(
                       child: Text(
-                        'Contact',
+                        'X(Twitter)',
                         style:
                             Theme.of(context).textTheme.titleMedium?.copyWith(
                                   fontSize: 14,
@@ -208,7 +208,7 @@ class FooterWidget extends StatelessWidget {
                     const VerticalLine(),
                     InkWell(
                       child: Text(
-                        '2024',
+                        '2024 Edition',
                         style:
                             Theme.of(context).textTheme.titleMedium?.copyWith(
                                   fontSize: 14,
