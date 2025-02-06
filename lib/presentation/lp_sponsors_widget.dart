@@ -32,7 +32,13 @@ class SponsorsWidget extends StatelessWidget {
             onPressed: () {
               launchUrlString('https://forms.gle/XMQjj9D4QPc3yy66A');
             },
-            child: const Text('Contact us!'),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'Contact us!',
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
           ),
         ],
       ),

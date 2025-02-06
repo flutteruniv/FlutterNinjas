@@ -4,8 +4,7 @@ enum SpeakerType {
     title: 'Riverpod 3.0, the preview',
     xAccountName: 'remi_rousselet',
     logoAssetName: 'resources/images/remi_profile.jpg',
-    desc:
-        'The creator of the Flutter packages provider, flutter_hooks, riverpod, and freezed.',
+    desc: 'Guest Speaker / The creator of Riverpod',
     day: Day.day1,
     time: '5:25 pm ~ 5:55 pm',
     talkDescription:
