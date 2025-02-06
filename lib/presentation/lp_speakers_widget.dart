@@ -21,13 +21,24 @@ class SpeakersWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SelectableText(
-            'CfP',
+            'Speakers',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 42 : 156,
                   height: 1,
                 ),
           ),
           SizedBox(height: isMobile ? 20 : 40),
+          const SpeakerItemWidget(speakerType: SpeakerType.remi),
+          SizedBox(height: isMobile ? 20 : 40),
+          SizedBox(height: isMobile ? 20 : 40),
+          SelectableText(
+            'Besides Remi, we are looking for more speakers!',
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.normal,
+                ),
+          ),
+          SizedBox(height: isMobile ? 10 : 20),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColor.ninjaBlack,
