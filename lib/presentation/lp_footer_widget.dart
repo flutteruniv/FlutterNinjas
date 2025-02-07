@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutterninjas/presentation/2024/lp_2024_page.dart';
 import 'package:flutterninjas/presentation/tokusho_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -119,7 +118,8 @@ class FooterWidget extends StatelessWidget {
                                   color: Colors.black,
                                 ),
                       ),
-                      onTap: () => context.go(LP2024Page.route),
+                      onTap: () =>
+                          launchUrlString('https://flutterninjas.dev/2024'),
                     ),
                     const SizedBox(
                       height: 32,
@@ -216,7 +216,8 @@ class FooterWidget extends StatelessWidget {
                                   color: Colors.black,
                                 ),
                       ),
-                      onTap: () => context.go(LP2024Page.route),
+                      onTap: () =>
+                          launchUrlString('https://flutterninjas.dev/2024'),
                     ),
                     const Spacer(),
                     SelectableText(
