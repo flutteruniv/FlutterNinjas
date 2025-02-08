@@ -29,8 +29,10 @@ class About2024Widget extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           SizedBox(height: isMobile ? 20 : 40),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          OverflowBar(
+            alignment: MainAxisAlignment.center,
+            overflowAlignment: OverflowBarAlignment.center,
+            overflowSpacing: 8,
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -60,6 +62,23 @@ class About2024Widget extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Text(
                     'YouTube',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 20),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColor.ninjaBlack,
+                ),
+                onPressed: () {
+                  launchUrlString(
+                      'https://blog.flutteruniv.com/flutterninjas-recap/');
+                },
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'Recap',
                     style: TextStyle(fontSize: 16),
                   ),
                 ),
