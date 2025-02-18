@@ -92,7 +92,7 @@ class SilverSponsorItemWidget extends StatelessWidget {
         launchUrlString(type.url);
       },
       child: Padding(
-        padding: const EdgeInsets.all(40),
+        padding: EdgeInsets.all(isMobile ? 8 : 40),
         child: Image.asset(
           type.logoAssetName,
         ),
