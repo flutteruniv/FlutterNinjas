@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/link.dart';
 
-import '../../domain/organizer_type.dart';
+import '../../domain/2024/organizer_type.dart';
 import 'lp_2024_model.dart';
 import 'lp_base_container_2024.dart';
 

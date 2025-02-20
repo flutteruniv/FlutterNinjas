@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterninjas/domain/qa_type.dart';
+import 'package:flutterninjas/domain/2024/qa_type.dart';
 import 'package:provider/provider.dart';
 
 import 'lp_2024_model.dart';

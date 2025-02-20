@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterninjas/config/app_color.dart';
-import 'package:flutterninjas/domain/speaker_type.dart';
+import 'package:flutterninjas/domain/2024/speaker_type.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -28,6 +28,8 @@ class ScheduleWidget extends StatelessWidget {
           isMobile
               ? const Column(
                   children: [
+                    Day00ListView(),
+                    SizedBox(height: 64),
                     Day0ListView(),
                     SizedBox(height: 64),
                     Day1ListView(),
@@ -39,6 +41,10 @@ class ScheduleWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Expanded(
+                      child: Day00ListView(),
+                    ),
+                    SizedBox(width: 32),
                     Expanded(
                       child: Day0ListView(),
                     ),
@@ -58,6 +64,27 @@ class ScheduleWidget extends StatelessWidget {
   }
 }
 
+class Day00ListView extends StatelessWidget {
+  const Day00ListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      children: const [
+        Opacity(
+          opacity: 0.5,
+          child: DateWidget('May 27', '(Tue)'),
+        ),
+        SizedBox(height: 32),
+        Divider(color: Colors.white24),
+        BreakWidget('9:00 am ~ 6:00 pm', 'Optional Tour @Mt.Fuji🗻 (TBD)'),
+      ],
+    );
+  }
+}
+
 class Day0ListView extends StatelessWidget {
   const Day0ListView({super.key});
 
@@ -67,12 +94,14 @@ class Day0ListView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       children: const [
-        DateWidget('Jun 12'),
-        SizedBox(height: 32),
-        Divider(
-          color: Colors.white24,
+        Opacity(
+          opacity: 0.5,
+          child: DateWidget('May 28', '(Wed)'),
         ),
-        BreakWidget('7:00 pm ~ 10:00 pm', 'Pre-Party @Higashi-Ginza'),
+        SizedBox(height: 32),
+        Divider(color: Colors.white24),
+        BreakWidget('12:00 pm ~ 6:00 pm', 'Optional Tour @Tokyo🗼 (TBD)'),
+        BreakWidget('7:00 pm ~ 10:00 pm', 'Pre-Party @Higashi-Ginza🎉'),
       ],
     );
   }
@@ -87,25 +116,12 @@ class Day1ListView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       children: const [
-        DateWidget('Jun 13'),
+        DateWidget('May 29', '(Thu)'),
         SizedBox(height: 32),
-        Divider(
-          color: Colors.white24,
-        ),
+        Divider(color: Colors.white24),
         BreakWidget('9:30 am', 'Door Open'),
-        BreakWidget('10:00 am ~ 10:15 am', 'Opening talk'),
-        SessionWidget(SpeakerType.kevin),
-        SessionWidget(SpeakerType.parth),
-        BreakWidget('', 'Lunch Break🍙'),
-        SessionWidget(SpeakerType.manuela),
-        SessionWidget(SpeakerType.akanksha),
-        SessionWidget(SpeakerType.sasha),
-        BreakWidget('', 'Coffee Break☕'),
-        SessionWidget(SpeakerType.aoi),
-        SessionWidget(SpeakerType.marcin),
-        BreakWidget('', 'Coffee Break☕'),
-        SessionWidget(SpeakerType.remi),
-        SessionWidget(SpeakerType.kakeru),
+        BreakWidget('10:00 am ~ 10:30 am', 'Opening talk'),
+        BreakWidget('10:30 am ~ 6:30 pm', 'Conference (TBD)'),
         BreakWidget('6:30 pm ~ 6:45 pm', '️Closing @BRIDGE'),
       ],
     );
@@ -121,25 +137,12 @@ class Day2ListView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       children: const [
-        DateWidget('Jun 14'),
+        DateWidget('May 30', '(Fri)'),
         SizedBox(height: 32),
-        Divider(
-          color: Colors.white24,
-        ),
+        Divider(color: Colors.white24),
         BreakWidget('9:30 am', 'Door Open'),
         BreakWidget('10:00 am ~ 10:15 am', 'Opening remarks'),
-        SessionWidget(SpeakerType.kosuke),
-        SessionWidget(SpeakerType.takuma),
-        BreakWidget('', 'Lunch Break🍙'),
-        SessionWidget(SpeakerType.park),
-        SessionWidget(SpeakerType.itome),
-        SessionWidget(SpeakerType.ethiel),
-        BreakWidget('', 'Coffee Break☕'),
-        SessionWidget(SpeakerType.renuka),
-        SessionWidget(SpeakerType.abdelrahman),
-        BreakWidget('', 'Coffee Break☕️'),
-        SessionWidget(SpeakerType.tsuyoshi),
-        BreakWidget('6:30 pm ~ 7:00 pm', '️Special Panel Discussion'),
+        BreakWidget('10:15 am ~ 7:00 pm', 'Conference (TBD)'),
         BreakWidget('7:00 pm ~ 7:15 pm', '️Closing @PARK'),
         BreakWidget('7:30 pm ~ 9:00 pm', '️Networking & Dinner🍣'),
         // BreakWidget(
@@ -151,21 +154,66 @@ class Day2ListView extends StatelessWidget {
 
 class DateWidget extends StatelessWidget {
   const DateWidget(
-    this.text, {
+    this.text,
+    this.dayOfTheWeek, {
     super.key,
   });
   final String text;
+  final String dayOfTheWeek;
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      textAlign: TextAlign.center,
-      style: Theme.of(context).textTheme.displayLarge!.copyWith(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
+    final isMobile = context.watch<LPModel>().isMobile;
+    if (isMobile) {
+      return Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Text(
+            text,
+            style: Theme.of(context).textTheme.displayLarge!.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
           ),
-    );
+          const SizedBox(width: 16),
+          Text(
+            dayOfTheWeek,
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.normal,
+                ),
+          ),
+        ],
+      );
+    } else {
+      return Stack(
+        children: [
+          Text(
+            text,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.displayLarge!.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
+          Positioned(
+            bottom: 0,
+            right: 0,
+            child: Row(
+              children: [
+                Text(
+                  dayOfTheWeek,
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal,
+                      ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
   }
 }
 
@@ -326,7 +374,7 @@ class BreakWidget extends StatelessWidget {
     final isMobile = context.watch<LPModel>().isMobile;
 
     return SizedBox(
-      height: 95,
+      height: 100,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

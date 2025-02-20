@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/link.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import '../../domain/speaker_type.dart';
+import '../../domain/2024/speaker_type.dart';
 import '../config/app_color.dart';
 import 'lp_base_container.dart';
 import 'lp_model.dart';

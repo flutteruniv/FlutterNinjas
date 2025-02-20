@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterninjas/domain/sponsor_type.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../config/app_color.dart';
+import '../domain/sponsor_type.dart';
 import 'lp_base_container.dart';
 import 'lp_model.dart';
 
@@ -24,7 +24,37 @@ class SponsorsWidget extends StatelessWidget {
                   height: 1,
                 ),
           ),
-          SizedBox(height: isMobile ? 20 : 40),
+          const SizedBox(height: 80),
+          SelectableText(
+            'Silver',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                  fontSize: isMobile ? 28 : 56,
+                  height: 1,
+                  color: Colors.white,
+                ),
+          ),
+          SizedBox(height: isMobile ? 16 : 24),
+          GridView.count(
+            crossAxisCount: isMobile ? 3 : 3,
+            childAspectRatio: 1,
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            mainAxisSpacing: 8,
+            crossAxisSpacing: 16,
+            children: SilverSponsorType.values
+                .map((sponsor) => SilverSponsorItemWidget(type: sponsor))
+                .toList(),
+          ),
+          const SizedBox(height: 80),
+          SelectableText(
+            'We are looking for sponsors!',
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.normal,
+                ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 16),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColor.ninjaBlack,
@@ -46,12 +76,12 @@ class SponsorsWidget extends StatelessWidget {
   }
 }
 
-class PlatinumSponsorItemWidget extends StatelessWidget {
-  const PlatinumSponsorItemWidget({
+class SilverSponsorItemWidget extends StatelessWidget {
+  const SilverSponsorItemWidget({
     super.key,
     required this.type,
   });
-  final PlatinumSponsorType type;
+  final SilverSponsorType type;
 
   @override
   Widget build(BuildContext context) {
@@ -62,87 +92,9 @@ class PlatinumSponsorItemWidget extends StatelessWidget {
         launchUrlString(type.url);
       },
       child: Padding(
-        padding: EdgeInsets.all(isMobile ? 16 : 40),
+        padding: EdgeInsets.all(isMobile ? 8 : 40),
         child: Image.asset(
           type.logoAssetName,
-          fit: BoxFit.contain,
-        ),
-      ),
-    );
-  }
-}
-
-class GoldSponsorItemWidget extends StatelessWidget {
-  const GoldSponsorItemWidget({
-    super.key,
-    required this.type,
-  });
-  final GoldSponsorType type;
-
-  @override
-  Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
-
-    return InkWell(
-      onTap: () {
-        launchUrlString(type.url);
-      },
-      child: Padding(
-        padding: EdgeInsets.all(isMobile ? 4 : 20),
-        child: Image.asset(
-          type.logoAssetName,
-          fit: BoxFit.contain,
-        ),
-      ),
-    );
-  }
-}
-
-class CommunitySponsorItemWidget extends StatelessWidget {
-  const CommunitySponsorItemWidget({
-    super.key,
-    required this.type,
-  });
-  final CommunitySponsorType type;
-
-  @override
-  Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
-
-    return InkWell(
-      onTap: () {
-        launchUrlString(type.url);
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Image.asset(
-          type.logoAssetName,
-        ),
-      ),
-    );
-  }
-}
-
-class SwagSponsorItemWidget extends StatelessWidget {
-  const SwagSponsorItemWidget({
-    super.key,
-    required this.type,
-  });
-  final SwagSponsorType type;
-
-  @override
-  Widget build(BuildContext context) {
-    final isMobile = context.watch<LPModel>().isMobile;
-
-    return InkWell(
-      onTap: () {
-        launchUrlString(type.url);
-      },
-      child: Padding(
-        padding: EdgeInsets.all(isMobile ? 4 : 20),
-        child: Image.asset(
-          type.logoAssetName,
-          fit: BoxFit.contain,
         ),
       ),
     );

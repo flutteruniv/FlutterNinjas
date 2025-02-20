@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterninjas/config/app_color.dart';
-import 'package:flutterninjas/domain/speaker_type.dart';
+import 'package:flutterninjas/domain/2024/speaker_type.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
