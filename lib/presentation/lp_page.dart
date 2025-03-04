@@ -6,6 +6,7 @@ import 'about_2024_widget.dart';
 import 'lp_footer_widget.dart';
 import 'lp_header_appbar.dart';
 import 'lp_model.dart';
+import 'lp_organizers_widget.dart';
 import 'lp_outline_widget.dart';
 import 'lp_schedule_widget.dart';
 import 'lp_speakers_widget.dart';
@@ -42,7 +43,7 @@ class LPPage extends StatelessWidget {
                     const VenueWidget(),
                     const About2024Widget(),
                     //QAWidget(),
-                    //OrganizersWidget(),
+                    const OrganizersWidget(),
                     FooterWidget(isMobile: model.isMobile),
                   ],
                 ),
