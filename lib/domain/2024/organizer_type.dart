@@ -2,7 +2,7 @@ enum OrganizerType {
   kboy(
     name: 'Kei Fujikawa',
     xAccountName: 'kboy_silvergym',
-    logoAssetName: 'resources/images/kboy.jpeg',
+    logoAssetName: 'resources/images/kboy.jpg',
   ),
   kosuke(
     name: 'Kosuke Saigusa',
@@ -11,18 +11,18 @@ enum OrganizerType {
   ),
   masaki(
     name: 'Masaki Sato',
-    xAccountName: 'masaki_hideout',
+    xAccountName: 'masak1sat0',
     logoAssetName: 'resources/images/masaki.jpeg',
   ),
   yanoo(
     name: 'Yushi Nogami',
     xAccountName: 'yanooo_jp',
-    logoAssetName: 'resources/images/yanoo.jpeg',
+    logoAssetName: 'resources/images/yanoo.jpg',
   ),
   kitsu(
     name: 'Kazuki Kitsukawa',
     xAccountName: 'kitsu2_',
-    logoAssetName: 'resources/images/kitsu.jpeg',
+    logoAssetName: 'resources/images/kitsu.jpg',
   ),
   yuto(
     name: 'Yuto Kimura',
