@@ -28,8 +28,6 @@ class ScheduleWidget extends StatelessWidget {
           isMobile
               ? const Column(
                   children: [
-                    Day00ListView(),
-                    SizedBox(height: 64),
                     Day0ListView(),
                     SizedBox(height: 64),
                     Day1ListView(),
@@ -41,10 +39,6 @@ class ScheduleWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      child: Day00ListView(),
-                    ),
-                    SizedBox(width: 32),
                     Expanded(
                       child: Day0ListView(),
                     ),
