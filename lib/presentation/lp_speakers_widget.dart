@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/link.dart';
-import 'package:url_launcher/url_launcher_string.dart';
-
-import '../../domain/2024/speaker_type.dart';
-import '../config/app_color.dart';
+import '../domain/speaker_type.dart';
 import 'lp_base_container.dart';
 import 'lp_model.dart';
 
@@ -23,36 +20,21 @@ class SpeakersWidget extends StatelessWidget {
           SelectableText(
             'Speakers',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                  fontSize: isMobile ? 42 : 156,
-                  height: 1,
-                ),
+              fontSize: isMobile ? 42 : 156,
+              height: 1,
+            ),
           ),
           SizedBox(height: isMobile ? 20 : 40),
-          const SpeakerItemWidget(speakerType: SpeakerType.remi),
-          SizedBox(height: isMobile ? 20 : 40),
-          SizedBox(height: isMobile ? 20 : 40),
-          SelectableText(
-            'Besides Remi, we are looking for more speakers!',
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
-                ),
-          ),
-          SizedBox(height: isMobile ? 10 : 20),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: AppColor.ninjaBlack,
-            ),
-            onPressed: () {
-              launchUrlString('https://sessionize.com/flutterninjas-2025/');
-            },
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Submit your talk!',
-                style: TextStyle(fontSize: 16),
-              ),
-            ),
+          GridView.count(
+            mainAxisSpacing: 8,
+            crossAxisSpacing: 8,
+            childAspectRatio: isMobile ? 15 / 10 : 8 / 10,
+            crossAxisCount: isMobile ? 1 : 3,
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            children: SpeakerType.values
+                .map((speaker) => SpeakerItemWidget(speakerType: speaker))
+                .toList(),
           ),
         ],
       ),
