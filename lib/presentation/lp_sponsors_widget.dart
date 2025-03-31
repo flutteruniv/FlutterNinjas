@@ -26,6 +26,24 @@ class SponsorsWidget extends StatelessWidget {
           ),
           const SizedBox(height: 80),
           SelectableText(
+            'Gold',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+              fontSize: isMobile ? 28 : 56,
+              height: 1,
+              color: AppColor.primaryYellowColor,
+            ),
+          ),
+          GridView.count(
+            crossAxisCount: isMobile ? 1 : 1,
+            childAspectRatio: 10 / 2,
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            children: GoldSponsorType.values
+                .map((sponsor) => GoldSponsorItemWidget(type: sponsor))
+                .toList(),
+          ),
+          SizedBox(height: isMobile ? 80 : 90),
+          SelectableText(
             'Silver',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
                   fontSize: isMobile ? 28 : 56,
@@ -71,6 +89,32 @@ class SponsorsWidget extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class GoldSponsorItemWidget extends StatelessWidget {
+  const GoldSponsorItemWidget({
+    super.key,
+    required this.type,
+  });
+  final GoldSponsorType type;
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = context.watch<LPModel>().isMobile;
+
+    return InkWell(
+      onTap: () {
+        launchUrlString(type.url);
+      },
+      child: Padding(
+        padding: EdgeInsets.all(isMobile ? 4 : 20),
+        child: Image.asset(
+          type.logoAssetName,
+          fit: BoxFit.contain,
+        ),
       ),
     );
   }
