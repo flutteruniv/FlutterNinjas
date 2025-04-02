@@ -94,7 +94,7 @@ enum SpeakerType {
     title: '',
     xAccountName: 'ShuregDenisov',
     logoAssetName: 'resources/images/sasha-denisov.jpg',
-    desc: 'EPAM, Chief Software Engineer, Flutter and Dart GDE',
+    desc: 'GDE - Dart & Flutter | EPAM, Chief Software Engineer',
     day: Day.day1,
     time: '',
     talkDescription: '',
@@ -130,16 +130,16 @@ enum SpeakerType {
       time: '',
       talkDescription: ''
   ),
-  // csongor(
-  //     name: 'Csongor Vogel',
-  //     title: '',
-  //     xAccountName: 'coder_jedi',
-  //     logoAssetName: 'resources/images/akanksha-singh.jpg',
-  //     desc: '',
-  //     day: Day.day1,
-  //     time: '',
-  //     talkDescription: ''
-  // ),
+  csongor(
+      name: 'Csongor Vogel',
+      title: '',
+      xAccountName: 'GerfalconVogel',
+      logoAssetName: 'resources/images/csongor-vogel.png',
+      desc: 'GDE - Dart & Flutter /  Staff Software Engineer @talabat (Delivery hero)',
+      day: Day.day1,
+      time: '',
+      talkDescription: ''
+  ),
   ;
 
   const SpeakerType({
