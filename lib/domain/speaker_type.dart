@@ -103,8 +103,8 @@ enum SpeakerType {
       name: 'Shohei Ogawa & Kyo Yamamoto',
       title: '',
       xAccountName: 'heyhey1028',
-      logoAssetName: 'resources/images/heyhey.jpeg',
-      desc: 'Leader of Mobile App Team for BANK APP by Money Forward',
+      logoAssetName: 'resources/images/heyhey_kyo.png',
+      desc: 'Flutter Tech Lead @Money Forward, Inc. & Freelance mobile app developer',
       day: Day.day1,
       time: '',
       talkDescription: ''
