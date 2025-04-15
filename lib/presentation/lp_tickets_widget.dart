@@ -34,18 +34,18 @@ class TicketsWidget extends StatelessWidget {
           isMobile
               ? const Column(
                   children: [
-                    EarlyBird(),
-                    SizedBox(height: 32),
                     Regular(),
+                    SizedBox(height: 32),
+                    LateBird(),
                   ],
                 )
               : const Row(
                   children: [
                     Expanded(
-                      child: EarlyBird(),
+                      child: Regular(),
                     ),
                     Expanded(
-                      child: Regular(),
+                      child: LateBird(),
                     ),
                   ],
                 ),
@@ -201,7 +201,7 @@ class LateBird extends StatelessWidget {
           ),
           onPressed: () {
             launchUrlString(
-                'https://ti.to/flutterninjas/tokyo-2024/with/late-bird');
+                'https://ti.to/flutterninjas/tokyo-2025/with/late-bird');
           },
           child: const Padding(
             padding: EdgeInsets.all(8),

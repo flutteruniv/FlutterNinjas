@@ -31,7 +31,7 @@ enum SilverSponsorType {
   teamLab(
     name: 'teamLab',
     url: 'https://www.team-lab.com/',
-    logoAssetName: 'resources/images/teamLab_logo.png',
+    logoAssetName: 'resources/images/teamlab.png',
   ),
   codeMagic(
     name: 'Codemagic',

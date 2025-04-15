@@ -83,7 +83,7 @@ class SponsorsWidget extends StatelessWidget {
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                'Contact us!',
+                'Be a sponsor!',
                 style: TextStyle(fontSize: 16),
               ),
             ),
