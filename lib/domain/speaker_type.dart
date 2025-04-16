@@ -74,7 +74,7 @@ enum SpeakerType {
       title: '',
       xAccountName: 'mikediarmid',
       logoAssetName: 'resources/images/mike-diarmid.png',
-      desc: 'CTO & Founder of Invertase',
+      desc: 'GDE - Firebase / @FlutterFlow / Former CTO & Founder of Invertase',
       day: Day.day1,
       time: '',
       talkDescription: ''
