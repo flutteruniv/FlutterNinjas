@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutterninjas/config/app_color.dart';
-import 'package:flutterninjas/domain/2024/speaker_type.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
+import '../domain/speaker_type.dart';
 import 'lp_base_container.dart';
 import 'lp_model.dart';
 
@@ -58,27 +58,6 @@ class ScheduleWidget extends StatelessWidget {
   }
 }
 
-class Day00ListView extends StatelessWidget {
-  const Day00ListView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      physics: const NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      children: const [
-        Opacity(
-          opacity: 0.5,
-          child: DateWidget('May 27', '(Tue)'),
-        ),
-        SizedBox(height: 32),
-        Divider(color: Colors.white24),
-        BreakWidget('9:00 am ~ 6:00 pm', 'Optional Tour @Mt.Fuji🗻 (TBD)'),
-      ],
-    );
-  }
-}
-
 class Day0ListView extends StatelessWidget {
   const Day0ListView({super.key});
 
@@ -113,10 +92,19 @@ class Day1ListView extends StatelessWidget {
         DateWidget('May 29', '(Thu)'),
         SizedBox(height: 32),
         Divider(color: Colors.white24),
-        BreakWidget('9:30 am', 'Door Open'),
-        BreakWidget('10:00 am ~ 10:30 am', 'Opening talk'),
-        BreakWidget('10:30 am ~ 6:30 pm', 'Conference (TBD)'),
-        BreakWidget('6:30 pm ~ 6:45 pm', '️Closing @BRIDGE'),
+        BreakWidget('9:30 am', 'Doors Open'),
+        BreakWidget('10:00 am ~ 10:15 am', 'Opening'),
+        SessionWidget(SpeakerType.kyo),
+        SessionWidget(SpeakerType.sasha),
+        BreakWidget('', 'Lunch Break🍙'),
+        SessionWidget(SpeakerType.ashita),
+        SessionWidget(SpeakerType.akansha),
+        BreakWidget('', 'Coffee Break☕'),
+        SessionWidget(SpeakerType.csongor),
+        SessionWidget(SpeakerType.festus),
+        BreakWidget('', 'Coffee Break☕'),
+        SessionWidget(SpeakerType.kenichi),
+        BreakWidget('6:30 pm ~ 6:45 pm', 'Closing'),
       ],
     );
   }
@@ -134,13 +122,21 @@ class Day2ListView extends StatelessWidget {
         DateWidget('May 30', '(Fri)'),
         SizedBox(height: 32),
         Divider(color: Colors.white24),
-        BreakWidget('9:30 am', 'Door Open'),
-        BreakWidget('10:00 am ~ 10:15 am', 'Opening remarks'),
-        BreakWidget('10:15 am ~ 7:00 pm', 'Conference (TBD)'),
-        BreakWidget('7:00 pm ~ 7:15 pm', '️Closing @PARK'),
-        BreakWidget('7:30 pm ~ 9:00 pm', '️Networking & Dinner🍣'),
-        // BreakWidget(
-        //     '9:30 pm ~ 11:30 pm', '️After Izakaya Party 🍺 @TBD'),
+        BreakWidget('9:30 am', 'Doors Open'),
+        BreakWidget('10:00 am ~ 10:15 am', 'Opening'),
+        SessionWidget(SpeakerType.majid),
+        SessionWidget(SpeakerType.masahiro),
+        BreakWidget('', 'Lunch Break🍙'),
+        SessionWidget(SpeakerType.samuel),
+        SessionWidget(SpeakerType.yugo),
+        SessionWidget(SpeakerType.mike),
+        BreakWidget('', 'Coffee Break☕'),
+        SessionWidget(SpeakerType.tsuyoshi),
+        SessionWidget(SpeakerType.remi),
+        BreakWidget('', 'Coffee Break☕'),
+        BreakWidget('5:45 pm ~ 6:25 pm', 'Special Panel Discussion'),
+        BreakWidget('6:25 pm ~ 6:55 pm', 'Closing'),
+        BreakWidget('7:00 pm ~ 9:00 pm', '️Networking & Dinner🍣'),
       ],
     );
   }
