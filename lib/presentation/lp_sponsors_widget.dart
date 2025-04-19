@@ -63,28 +63,57 @@ class SponsorsWidget extends StatelessWidget {
                 .map((sponsor) => SilverSponsorItemWidget(type: sponsor))
                 .toList(),
           ),
-          const SizedBox(height: 80),
+          const SizedBox(height: 16),
           SelectableText(
-            'We are looking for sponsors!',
+            'Support FlutterNinjas in a way that suits you.\n'
+                'You can become a Community Sponsor and complete your support online immediately. After your payment, we’ll get back to you as soon as possible with a confirmation.\n'
+                'For Silver sponsorships or above, please contact us via the form to receive more details.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
-                ),
+              color: Colors.white,
+              fontWeight: FontWeight.normal,
+            ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 16),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColor.ninjaBlack,
+              padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(32),
+              ),
+            ),
+            onPressed: () {
+              launchUrlString('https://kboy-inc.notion.site/FlutterNinjas-Tokyo-2025-community-sponsorship-agreement-1c118ee3a61380e3bd63e4030c7415e2');
+            },
+            child: const Text(
+              '🤝 Support as a Community Sponsor (¥55,000)',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
+
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppColor.ninjaBlack,
+              padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(32),
+              ),
             ),
             onPressed: () {
               launchUrlString('https://forms.gle/XMQjj9D4QPc3yy66A');
             },
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Be a sponsor!',
-                style: TextStyle(fontSize: 16),
+            child: const Text(
+              '📩 Become a Silver Sponsor or Above',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
             ),
           ),
