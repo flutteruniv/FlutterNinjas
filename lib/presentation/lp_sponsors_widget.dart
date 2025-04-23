@@ -63,6 +63,27 @@ class SponsorsWidget extends StatelessWidget {
                 .map((sponsor) => SilverSponsorItemWidget(type: sponsor))
                 .toList(),
           ),
+          const SizedBox(height: 80),
+          SelectableText(
+            'Community',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+              fontSize: isMobile ? 28 : 56,
+              height: 1,
+              color: Colors.white,
+            ),
+          ),
+          SizedBox(height: isMobile ? 16 : 24),
+          GridView.count(
+            crossAxisCount: isMobile ? 2 : 6,
+            childAspectRatio: 1,
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            mainAxisSpacing: 8,
+            crossAxisSpacing: 16,
+            children: CommunitySponsorType.values
+                .map((sponsor) => CommunitySponsorItemWidget(type: sponsor))
+                .toList(),
+          ),
           const SizedBox(height: 16),
           SelectableText(
             'Support FlutterNinjas in a way that suits you.\n'
@@ -96,7 +117,6 @@ class SponsorsWidget extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColor.ninjaBlack,
@@ -166,6 +186,31 @@ class SilverSponsorItemWidget extends StatelessWidget {
       },
       child: Padding(
         padding: EdgeInsets.all(isMobile ? 8 : 40),
+        child: Image.asset(
+          type.logoAssetName,
+        ),
+      ),
+    );
+  }
+}
+
+class CommunitySponsorItemWidget extends StatelessWidget {
+  const CommunitySponsorItemWidget({
+    super.key,
+    required this.type,
+  });
+  final CommunitySponsorType type;
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = context.watch<LPModel>().isMobile;
+
+    return InkWell(
+      onTap: () {
+        launchUrlString(type.url);
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(24),
         child: Image.asset(
           type.logoAssetName,
         ),

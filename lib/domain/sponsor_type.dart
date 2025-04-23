@@ -53,9 +53,38 @@ enum SilverSponsorType {
     url: 'https://ivry.jp/',
     logoAssetName: 'resources/images/ivry.png',
   ),
+  yumemi(
+    name: 'ゆめみ',
+    url: 'https://www.yumemi.co.jp/',
+    logoAssetName: 'resources/images/yumemi.png',
+  ),
+  omiai(
+    name: 'Omiai',
+    url: 'https://enito.co.jp/',
+    logoAssetName: 'resources/images/omiai.png',
+  ),
   ;
 
   const SilverSponsorType({
+    required this.name,
+    required this.url,
+    required this.logoAssetName,
+  });
+
+  final String name;
+  final String url;
+  final String logoAssetName;
+}
+
+enum CommunitySponsorType {
+  ibj(
+    name: 'IBJ',
+    url: 'https://www.ibjapan.jp/',
+    logoAssetName: 'resources/images/ibj.png',
+  ),
+  ;
+
+  const CommunitySponsorType({
     required this.name,
     required this.url,
     required this.logoAssetName,
