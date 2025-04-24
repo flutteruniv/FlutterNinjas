@@ -105,7 +105,7 @@ class SponsorsWidget extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              launchUrlString('https://kboy-inc.notion.site/FlutterNinjas-Tokyo-2025-community-sponsorship-agreement-1c118ee3a61380e3bd63e4030c7415e2');
+              launchUrlString('https://buy.stripe.com/fZecPWbjNeuBaT6bIR');
             },
             child: const Text(
               '🤝 Support as a Community Sponsor (¥55,000)',
