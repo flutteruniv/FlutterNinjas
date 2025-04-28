@@ -2,7 +2,7 @@ enum GoldSponsorType {
   flutter(
     name: 'Flutter',
     url: 'https://flutter.dev/',
-    logoAssetName: 'resources/images/flutter.png',
+    logoAssetName: 'resources/images/flutter_white.png',
   ),
   ;
 

@@ -33,9 +33,10 @@ class SponsorsWidget extends StatelessWidget {
               color: AppColor.primaryYellowColor,
             ),
           ),
+          SizedBox(height: isMobile ? 16 : 24),
           GridView.count(
             crossAxisCount: isMobile ? 1 : 1,
-            childAspectRatio: 10 / 2,
+            childAspectRatio: 10 / 4,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             children: GoldSponsorType.values
@@ -84,7 +85,16 @@ class SponsorsWidget extends StatelessWidget {
                 .map((sponsor) => CommunitySponsorItemWidget(type: sponsor))
                 .toList(),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 80),
+          SelectableText(
+            'We\'re looking for sponsors!',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+              fontSize: isMobile ? 28 : 56,
+              height: 1,
+              color: Colors.white,
+            ),
+          ),
+          SizedBox(height: isMobile ? 16 : 24),
           SelectableText(
             'Support FlutterNinjas in a way that suits you.\n'
                 'Community Sponsorship offers logo display only, while higher tiers come with additional benefits.\n'
