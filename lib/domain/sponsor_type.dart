@@ -63,6 +63,11 @@ enum SilverSponsorType {
     url: 'https://enito.co.jp/',
     logoAssetName: 'resources/images/omiai.png',
   ),
+  flutterFlow(
+    name: 'FlutterFlow',
+    url: 'https://flutterflow.io/',
+    logoAssetName: 'resources/images/flutterflow.png',
+  ),
   ;
 
   const SilverSponsorType({
