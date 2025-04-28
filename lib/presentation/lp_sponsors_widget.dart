@@ -74,7 +74,7 @@ class SponsorsWidget extends StatelessWidget {
           ),
           SizedBox(height: isMobile ? 16 : 24),
           GridView.count(
-            crossAxisCount: isMobile ? 2 : 6,
+            crossAxisCount: isMobile ? 3 : 6,
             childAspectRatio: 1,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
@@ -87,8 +87,8 @@ class SponsorsWidget extends StatelessWidget {
           const SizedBox(height: 16),
           SelectableText(
             'Support FlutterNinjas in a way that suits you.\n'
-                'You can become a Community Sponsor and complete your support online immediately. After your payment, we’ll get back to you as soon as possible with a confirmation.\n'
-                'For Silver sponsorships or above, please contact us via the form to receive more details.',
+                'Community Sponsorship offers logo display only, while higher tiers come with additional benefits.\n'
+                'You can complete your Community Sponsorship online now. For Silver or higher, please contact us for details.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.normal,
