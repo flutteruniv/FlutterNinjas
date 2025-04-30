@@ -73,8 +73,8 @@ class Day0ListView extends StatelessWidget {
         ),
         SizedBox(height: 32),
         Divider(color: Colors.white24),
-        BreakWidget('12:00 pm ~ 6:00 pm', 'Optional Tour @Tokyo🗼 (TBD)'),
-        BreakWidget('7:00 pm ~ 10:00 pm', 'Pre-Party @Higashi-Ginza🎉'),
+        TokyoTourWidget(),
+        BreakWidget('7:00 pm ~ 10:00 pm', 'Pre-Party@Higashi-Ginza🎉 ￥2,000 w/ 2 drinks'),
       ],
     );
   }
@@ -385,6 +385,54 @@ class BreakWidget extends StatelessWidget {
                   fontWeight: FontWeight.normal,
                   fontSize: 16,
                 ),
+          ),
+          const Spacer(),
+          const Divider(
+            color: Colors.white24,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class TokyoTourWidget extends StatelessWidget {
+  const TokyoTourWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = context.watch<LPModel>().isMobile;
+
+    return SizedBox(
+      height: 460,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SelectableText(
+              '12:00pm ~ 5:30pm',
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.normal,
+              ),
+          ),
+          SelectableText(
+            'Tokyo Tour 🗼',
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
+          ),
+          const SizedBox(height: 8),
+          SelectableText(
+            'This is optional. Join anytime, leave anytime — it’s casual and fun! \n\n¥2000 (Only tour)\n¥3000 (includes tour + pre-party w/ 2 drinks).\n\n'
+                '12:00 Asakusa Station\n→ Lunch\n→ Asakusa Tour (Kaminarimon, Sensō-ji)\n→ Ueno Park & Ameyoko\n→ Akihabara Arcades\n→17:30~ Dinner and Pre-Party🎉',
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+              color: Colors.white,
+              fontWeight: FontWeight.normal,
+              fontSize: 16,
+            ),
           ),
           const Spacer(),
           const Divider(
