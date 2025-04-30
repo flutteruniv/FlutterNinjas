@@ -426,7 +426,7 @@ class TokyoTourWidget extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           SelectableText(
-            'This is an optional. Join anytime, leave anytime — it’s casual and fun! \n\n¥2000 (Only tour)\n¥3000 (includes tour + pre-party w/ 2 drinks).\n\n'
+            'This is optional. Join anytime, leave anytime — it’s casual and fun! \n\n¥2000 (Only tour)\n¥3000 (includes tour + pre-party w/ 2 drinks).\n\n'
                 '12:00 Asakusa Station\n→ Lunch\n→ Asakusa Tour (Kaminarimon, Sensō-ji)\n→ Ueno Park & Ameyoko\n→ Akihabara Arcades\n→17:30~ Dinner and Pre-Party🎉',
             style: Theme.of(context).textTheme.bodyMedium!.copyWith(
               color: Colors.white,
