@@ -71,7 +71,7 @@ class VenueWidget extends StatelessWidget {
             children: [
               Expanded(
                 child: Image.asset(
-                  'resources/images/venue2.jpeg',
+                  'resources/images/venue4.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
@@ -80,7 +80,7 @@ class VenueWidget extends StatelessWidget {
               ),
               Expanded(
                 child: Image.asset(
-                  'resources/images/venue3.jpeg',
+                  'resources/images/venue5.jpg',
                   fit: BoxFit.cover,
                 ),
               )
