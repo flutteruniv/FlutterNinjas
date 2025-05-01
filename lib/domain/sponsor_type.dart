@@ -87,6 +87,11 @@ enum CommunitySponsorType {
     url: 'https://www.ibjapan.jp/',
     logoAssetName: 'resources/images/ibj.png',
   ),
+  blendthink(
+    name: 'blendthink',
+    url: 'https://twitter.com/blendthink',
+    logoAssetName: 'resources/images/blendthink.png',
+  ),
   ;
 
   const CommunitySponsorType({
