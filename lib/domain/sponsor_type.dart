@@ -92,6 +92,11 @@ enum CommunitySponsorType {
     url: 'https://twitter.com/blendthink',
     logoAssetName: 'resources/images/blendthink.png',
   ),
+  shorebird(
+    name: 'shorebird',
+    url: 'https://shorebird.dev/',
+    logoAssetName: 'resources/images/shorebird.png',
+  ),
   ;
 
   const CommunitySponsorType({
