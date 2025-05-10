@@ -86,22 +86,22 @@ class VenueWidget extends StatelessWidget {
               )
             ],
           ),
-          // const SizedBox(height: 80),
-          // SelectableText(
-          //   'Floor Map',
-          //   style: Theme.of(context).textTheme.displayLarge?.copyWith(
-          //         fontSize: isMobile ? 28 : 56,
-          //         height: 1,
-          //         color: Colors.white,
-          //       ),
-          // ),
-          // const SizedBox(
-          //   height: 16,
-          // ),
-          // Image.asset(
-          //   'resources/images/floor_map.png',
-          //   fit: BoxFit.cover,
-          // ),
+          const SizedBox(height: 40),
+          SelectableText(
+            'Floor Map',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                  fontSize: isMobile ? 28 : 56,
+                  height: 1,
+                  color: Colors.white,
+                ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          Image.asset(
+            'resources/images/floor_map_2025.png',
+            fit: BoxFit.cover,
+          ),
         ],
       ),
     );
