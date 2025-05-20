@@ -68,6 +68,16 @@ enum SilverSponsorType {
     url: 'https://flutterflow.io/',
     logoAssetName: 'resources/images/flutterflow.png',
   ),
+  mercari(
+    name: 'mercari',
+    url: 'https://about.mercari.com/',
+    logoAssetName: 'resources/images/mercari.png',
+  ),
+  dcm(
+    name: 'DCM',
+    url: 'https://dcm.dev',
+    logoAssetName: 'resources/images/dcm.png',
+  ),
   ;
 
   const SilverSponsorType({
@@ -91,6 +101,11 @@ enum CommunitySponsorType {
     name: 'blendthink',
     url: 'https://twitter.com/blendthink',
     logoAssetName: 'resources/images/blendthink.png',
+  ),
+  shorebird(
+    name: 'shorebird',
+    url: 'https://shorebird.dev/',
+    logoAssetName: 'resources/images/shorebird.png',
   ),
   ;
 
