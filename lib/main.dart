@@ -37,7 +37,7 @@ class AppTheme {
           secondary: AppColor.primaryYellowColor,
         ),
     scaffoldBackgroundColor: AppColor.backgroundNavy,
-    cardTheme: const CardThemeData(
+    cardTheme: const CardTheme(
       margin: EdgeInsets.zero,
     ),
     appBarTheme: const AppBarTheme(
