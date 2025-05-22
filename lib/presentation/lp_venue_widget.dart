@@ -102,6 +102,75 @@ class VenueWidget extends StatelessWidget {
             'resources/images/floor_map_2025.png',
             fit: BoxFit.cover,
           ),
+          const SizedBox(height: 40),
+          SelectableText(
+            'Entertainment',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+              fontSize: isMobile ? 28 : 56,
+              height: 1,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          Text('We have some entertainment for you!\nNail artist KYORO and DJ 日聖 will be there to make the event even more enjoyable.',
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+              color: Colors.white,
+              fontWeight: FontWeight.normal,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 40,
+            runSpacing: 40,
+            children: [
+              Column(
+                children: [
+                  Image.asset(
+                    'resources/images/nailist_kyoro.jpg',
+                    fit: BoxFit.cover,
+                    width: 160,
+                    height: 160,
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text('Nail artist KYORO',
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal,
+                      ),
+                      textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Image.asset(
+                    'resources/images/dj_nissei.jpg',
+                    fit: BoxFit.cover,
+                    width: 160,
+                    height: 160,
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text('DJ 日聖',
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal,
+                      ),
+                      textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ],
       ),
     );
