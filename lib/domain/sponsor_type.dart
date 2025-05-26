@@ -91,6 +91,26 @@ enum SilverSponsorType {
   final String logoAssetName;
 }
 
+enum AppSponsorType {
+  nekologic(
+    name: 'Nekologic',
+    url: 'https://neko-logic.com',
+    logoAssetName: 'resources/images/nekologic.png',
+  ),
+  ;
+
+  const AppSponsorType({
+    required this.name,
+    required this.url,
+    required this.logoAssetName,
+  });
+
+  final String name;
+  final String url;
+  final String logoAssetName;
+}
+
+
 enum CommunitySponsorType {
   ibj(
     name: 'IBJ',
