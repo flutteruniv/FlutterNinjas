@@ -28,10 +28,10 @@ class SponsorsWidget extends StatelessWidget {
           SelectableText(
             'Gold',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
-              fontSize: isMobile ? 28 : 56,
-              height: 1,
-              color: AppColor.primaryYellowColor,
-            ),
+                  fontSize: isMobile ? 28 : 56,
+                  height: 1,
+                  color: AppColor.primaryYellowColor,
+                ),
           ),
           SizedBox(height: isMobile ? 16 : 24),
           GridView.count(
@@ -64,14 +64,29 @@ class SponsorsWidget extends StatelessWidget {
                 .map((sponsor) => SilverSponsorItemWidget(type: sponsor))
                 .toList(),
           ),
+          SizedBox(height: isMobile ? 80 : 90),
+          SelectableText(
+            'App Sponsor',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                  fontSize: isMobile ? 28 : 56,
+                  height: 1,
+                  color: Colors.white,
+                ),
+          ),
+          SizedBox(height: isMobile ? 16 : 24),
+          SizedBox(
+            width: isMobile ? 120 : 270,
+            height: isMobile ? 120 : 270,
+            child: const AppSponsorItemWidget(type: AppSponsorType.nekologic),
+          ),
           const SizedBox(height: 80),
           SelectableText(
             'Community',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
-              fontSize: isMobile ? 28 : 56,
-              height: 1,
-              color: Colors.white,
-            ),
+                  fontSize: isMobile ? 28 : 56,
+                  height: 1,
+                  color: Colors.white,
+                ),
           ),
           SizedBox(height: isMobile ? 16 : 24),
           GridView.count(
@@ -89,20 +104,20 @@ class SponsorsWidget extends StatelessWidget {
           SelectableText(
             'We\'re looking for sponsors!',
             style: Theme.of(context).textTheme.displayLarge?.copyWith(
-              fontSize: isMobile ? 28 : 56,
-              height: 1,
-              color: Colors.white,
-            ),
+                  fontSize: isMobile ? 28 : 56,
+                  height: 1,
+                  color: Colors.white,
+                ),
           ),
           SizedBox(height: isMobile ? 16 : 24),
           SelectableText(
             'Support FlutterNinjas in a way that suits you.\n'
-                'Community Sponsorship offers logo display only, while higher tiers come with additional benefits.\n'
-                'You can complete your Community Sponsorship online now. For Silver or higher, please contact us for details.',
+            'Community Sponsorship offers logo display only, while higher tiers come with additional benefits.\n'
+            'You can complete your Community Sponsorship online now. For Silver or higher, please contact us for details.',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
-              color: Colors.white,
-              fontWeight: FontWeight.normal,
-            ),
+                  color: Colors.white,
+                  fontWeight: FontWeight.normal,
+                ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 16),
@@ -185,6 +200,31 @@ class SilverSponsorItemWidget extends StatelessWidget {
     required this.type,
   });
   final SilverSponsorType type;
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = context.watch<LPModel>().isMobile;
+
+    return InkWell(
+      onTap: () {
+        launchUrlString(type.url);
+      },
+      child: Padding(
+        padding: EdgeInsets.all(isMobile ? 8 : 40),
+        child: Image.asset(
+          type.logoAssetName,
+        ),
+      ),
+    );
+  }
+}
+
+class AppSponsorItemWidget extends StatelessWidget {
+  const AppSponsorItemWidget({
+    super.key,
+    required this.type,
+  });
+  final AppSponsorType type;
 
   @override
   Widget build(BuildContext context) {

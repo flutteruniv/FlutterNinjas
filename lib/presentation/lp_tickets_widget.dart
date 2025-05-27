@@ -25,30 +25,17 @@ class TicketsWidget extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           SelectableText(
-            'The ticket contains\n・2 days of FlutterNinjas💻\n・Asking the speakers🙋‍️\n・Coffee and some drinks☕️\n・Lunch for 2 days🍙\n・Dinner for 2nd day🥘\n・Pre-party🥳 \n・Slack community💬\n・Might get some special gifts🎁\n\nThe earlier you buy, the more you save.',
+            'The ticket contains\n・2 days of FlutterNinjas💻\n・Asking the speakers🙋‍️\n・Coffee and some drinks☕️\n・Lunch for 2 days🍙\n・Dinner for 2nd day🥘\n・Pre-party🥳 \n・Slack community💬\n・Might get some special gifts🎁',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
               color: Colors.white,
             ),
           ),
           const SizedBox(height: 32),
-          isMobile
-              ? const Column(
-                  children: [
-                    Regular(),
-                    SizedBox(height: 32),
-                    LateBird(),
-                  ],
-                )
-              : const Row(
-                  children: [
-                    Expanded(
-                      child: Regular(),
-                    ),
-                    Expanded(
-                      child: LateBird(),
-                    ),
-                  ],
-                ),
+          const SizedBox(
+            width: 300,
+            child: LateBird(),
+          ),
+
         ],
       ),
     );
