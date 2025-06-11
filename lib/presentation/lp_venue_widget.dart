@@ -86,24 +86,113 @@ class VenueWidget extends StatelessWidget {
               )
             ],
           ),
-          // const SizedBox(height: 80),
-          // SelectableText(
-          //   'Floor Map',
-          //   style: Theme.of(context).textTheme.displayLarge?.copyWith(
-          //         fontSize: isMobile ? 28 : 56,
-          //         height: 1,
-          //         color: Colors.white,
-          //       ),
-          // ),
-          // const SizedBox(
-          //   height: 16,
-          // ),
-          // Image.asset(
-          //   'resources/images/floor_map.png',
-          //   fit: BoxFit.cover,
-          // ),
+          const SizedBox(height: 40),
+          SelectableText(
+            'Floor Map',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                  fontSize: isMobile ? 28 : 56,
+                  height: 1,
+                  color: Colors.white,
+                ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          Image.asset(
+            'resources/images/floor_map_2025.png',
+            fit: BoxFit.cover,
+          ),
+          const SizedBox(height: 40),
+          SelectableText(
+            'Entertainment',
+            style: Theme.of(context).textTheme.displayLarge?.copyWith(
+              fontSize: isMobile ? 28 : 56,
+              height: 1,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          Text('We have some entertainment for you!',
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+              color: Colors.white,
+              fontWeight: FontWeight.normal,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          const Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 24,
+            runSpacing: 24,
+            children: [
+               EntertainmentWidget(
+                imageName: 'resources/images/nailist_kyoro.jpg',
+                title: 'Nail artist KYORO',
+              ),
+               EntertainmentWidget(
+                imageName: 'resources/images/dj_nissei.jpg',
+                title: 'DJ 日聖',
+              ),
+              EntertainmentWidget(
+                imageName: 'resources/images/flutter_quiz.png',
+                title: 'Flutter Quiz',
+              ),
+              EntertainmentWidget(
+                imageName: 'resources/images/boardgame.jpg',
+                title: 'Boardgame',
+              ),
+              EntertainmentWidget(
+                imageName: 'resources/images/snack.jpg',
+                title: 'Snack & Coffee',
+              ),
+              EntertainmentWidget(
+                imageName: 'resources/images/oden.png',
+                title: 'ODEN',
+              ),
+            ],
+          ),
         ],
       ),
+    );
+  }
+}
+
+class EntertainmentWidget extends StatelessWidget {
+  const EntertainmentWidget({
+    super.key,
+    required this.imageName,
+    required this.title,
+  });
+
+  final String imageName;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Image.asset(
+          imageName,
+          fit: BoxFit.cover,
+          width: 110,
+          height: 110,
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        Text(title,
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+              color: Colors.white,
+              fontWeight: FontWeight.normal,
+              fontSize: 12,
+            ),
+            textAlign: TextAlign.center,
+        ),
+      ],
     );
   }
 }

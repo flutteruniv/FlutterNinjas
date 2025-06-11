@@ -68,6 +68,16 @@ enum SilverSponsorType {
     url: 'https://flutterflow.io/',
     logoAssetName: 'resources/images/flutterflow.png',
   ),
+  mercari(
+    name: 'mercari',
+    url: 'https://about.mercari.com/',
+    logoAssetName: 'resources/images/mercari.png',
+  ),
+  dcm(
+    name: 'DCM',
+    url: 'https://dcm.dev',
+    logoAssetName: 'resources/images/dcm.png',
+  ),
   ;
 
   const SilverSponsorType({
@@ -81,6 +91,26 @@ enum SilverSponsorType {
   final String logoAssetName;
 }
 
+enum AppSponsorType {
+  nekologic(
+    name: 'Nekologic',
+    url: 'https://neko-logic.com',
+    logoAssetName: 'resources/images/nekologic.png',
+  ),
+  ;
+
+  const AppSponsorType({
+    required this.name,
+    required this.url,
+    required this.logoAssetName,
+  });
+
+  final String name;
+  final String url;
+  final String logoAssetName;
+}
+
+
 enum CommunitySponsorType {
   ibj(
     name: 'IBJ',
@@ -91,6 +121,11 @@ enum CommunitySponsorType {
     name: 'blendthink',
     url: 'https://twitter.com/blendthink',
     logoAssetName: 'resources/images/blendthink.png',
+  ),
+  shorebird(
+    name: 'shorebird',
+    url: 'https://shorebird.dev/',
+    logoAssetName: 'resources/images/shorebird.png',
   ),
   ;
 
